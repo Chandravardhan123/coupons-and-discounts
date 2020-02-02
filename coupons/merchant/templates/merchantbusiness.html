@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from codervent.com/rocker/color-version/form-validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Sep 2018 03:48:35 GMT -->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Rocker - Bootstrap4  Admin Dashboard Template</title>
+  <!--favicon-->
+  <link rel="icon" href="/static/merchant/assets/images/favicon.ico" type="image/x-icon">
+  <!-- simplebar CSS-->
+  <link href="/static/merchant/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="/static/merchant/assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="/static/merchant/assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="/static/merchant/assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="/static/merchant/assets/css/sidebar-menu.css" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="/static/merchant/assets/css/app-style.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    function showfield(name){
+      if(name=='coupons')document.getElementById('div1').innerHTML='<div class="form-group row"><label class="col-sm-2 col-form-label">COUPON CODE</label> <div class="col-sm-10">  <input type="text" name="type" class="form-control"  placeholder="Eg: Enter as CODE50 (not exceed 7 characters)"required/></div></div>';
+      else
+      if(name=='deals')document.getElementById('div1').innerHTML='<div class="form-group row"><label class="col-sm-2 col-form-label">Discount %</label> <div class="col-sm-10">  <input type="text" name="type" class="form-control" placeholder="Eg: Enter as 50% OFF (not exceed 7 characters)"  required/></div></div>';
+      
+    
+    }
+    function showfield1(name){
+      if(name=="food")document.getElementById('div2').innerHTML='<div class="form-group row"><label for="basic-select"  class="col-sm-2 col-form-label">Sub categories </label> <div class="col-sm-10"><select class="form-control" id="basic-select" name="sbtype" ><option selected="selected">Please select ...</option><option value="andhra">Andhra</option><option value="italian">Italian</option><option value="chinese">chinese</option><option value="american">American</option><option value="mexican">Mexican</option><option value="punjabi">Punjabi</option></select></div></div></select></div></div>'
+      else
+      if(name=="clothing")document.getElementById('div2').innerHTML='<div class="form-group row"><label for="basic-select"  class="col-sm-2 col-form-label">Sub categories </label> <div class="col-sm-10"><select class="form-control" id="basic-select" name="sbtype" ><option selected="selected">Please select ...</option><option value="menswear">menswear</option><option value="womenswear">womenswear</option><option value="kids">kidsWear</option></select></div></div></select></div></div>'
+      else
+      if(name=="saloon and spa")document.getElementById('div2').innerHTML='<div class="form-group row"><label for="basic-select"  class="col-sm-2 col-form-label">Sub categories </label> <div class="col-sm-10"><select class="form-control" id="basic-select" name="sbtype" ><option selected="selected">Please select ...</option><option value="hair">Hairstyles</option><option value="spa">SPA</option><option value="facials">Facials</option><option value="manicure">Manicure & Pedicure</option></select></div></div></select></div></div>'
+      else
+      if(name=="groceries")document.getElementById('div2').innerHTML='<div class="form-group row"><label for="basic-select"  class="col-sm-2 col-form-label">Sub categories </label> <div class="col-sm-10"><select class="form-control" id="basic-select" name="sbtype" ><option selected="selected">Please select ...</option><option value="all">all</option></select></div></div></select></div></div>'
+      else
+      if(name=="travel and education")document.getElementById('div2').innerHTML='<div class="form-group row"><label for="basic-select"  class="col-sm-2 col-form-label">Sub categories </label> <div class="col-sm-10"><select class="form-control" id="basic-select" name="sbtype" ><option selected="selected">Please select ...</option><option value="tickets">Tickets</option><option value="cabs">cabs</option><option value="tutions">tutions</option><option value="training">training centres</option></select></div></div></select></div></div>'
+      else
+      if(name=="jwellery")document.getElementById('div2').innerHTML='<div class="form-group row"><label for="basic-select"  class="col-sm-2 col-form-label">Sub categories </label> <div class="col-sm-10"><select class="form-control" id="basic-select" name="sbtype" ><option selected="selected">Please select ...</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="daimonds">Daimond</option></select></div></div></select></div></div>'
+      else
+      if(name=="mobiles and electronics")document.getElementById('div2').innerHTML='<div class="form-group row"><label for="basic-select"  class="col-sm-2 col-form-label">Sub categories </label> <div class="col-sm-10"><select class="form-control" id="basic-select" name="sbtype" ><option selected="selected">Please select ...</option><option value="mobiles">Mobiles</option><option value="laptops">Laptops & pcs</option><option value="gadgets">Gadgets</option></select></div></div></select></div></div>'
+      else
+      if(name=="home and kitchen")document.getElementById('div2').innerHTML='<div class="form-group row"><label for="basic-select"  class="col-sm-2 col-form-label">Sub categories </label> <div class="col-sm-10"><select class="form-control" id="basic-select" name="sbtype" ><option selected="selected">Please select ...</option><option value="appliances">Appliances</option><option value="furniture">Furniture</option></select></div></div></select></div></div>'
+
+    }
+
+
+      function Upload() {
+          //Get reference of FileUpload.
+          var fileUpload = document.getElementById("fileUpload");
+      
+          //Check whether the file is valid Image.
+          var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg)$");
+          if (regex.test(fileUpload.value.toLowerCase())) {
+      
+              //Check whether HTML5 is supported.
+              if (typeof (fileUpload.files) != "undefined") {
+                  //Initiate the FileReader object.
+                  var reader = new FileReader();
+                  //Read the contents of Image File.
+                  reader.readAsDataURL(fileUpload.files[0]);
+                  reader.onload = function (e) {
+                      //Initiate the JavaScript Image object.
+                      var image = new Image();
+      
+                      //Set the Base64 string return from FileReader as source.
+                      image.src = e.target.result;
+                             
+                      //Validate the File Height and Width.
+                      image.onload = function () {
+                          var height = this.height;
+                          var width = this.width;
+                          if (height < 1100|| width < 900 ) {
+                              alert("Height and Width must not exceed 500px & 300 px.");
+                              return false;
+                          }
+                          alert("your Uploaded image has valid Height and Width.");
+                          return true;
+                      };
+      
+                  }
+              } else {
+                  alert("This browser does not support HTML5.");
+                  return false;
+              }
+          } else {
+              alert("Please select a valid Image file.");
+              return false;
+          }
+      }
+    </script>
+  
+  
+</head>
+
+<body>
+
+<!-- Start wrapper-->
+ <div id="wrapper">
+ 
+   <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+    <div class="brand-logo">
+     <a href='/merchant/merchant_home/'>
+      <img src=>
+      <h5 class="logo-text">Best Buy Merchant</h5>
+    </a>
+  </div>
+  <ul class="sidebar-menu do-nicescrol">
+     <li class="sidebar-header"></li>
+     <li>
+       <a href='/merchant/merchant_home/' class="waves-effect">
+         <i class="icon-home"></i> <span>Home</span>
+       </a>
+      
+     </li>
+     
+     <li>
+       <a href='/merchant/merchantprofile/' class="waves-effect">
+         <i class="fa fa-user"></i> <span>Profile</span>
+       </a>
+      </li>
+     <li>
+       <a href='/merchant/merchant_business/' class="waves-effect">
+         <i class="icon-note"></i> <span>Business dashboard</span>
+       </a>
+     </li>
+
+     <li>
+       <a href='/merchant/merchant_saved_coupons/' class="waves-effect">
+         <i class="fa fa-tags"></i> <span>Saved Coupons</span>
+       </a>
+     </li>
+     
+  </div>
+   <!--End sidebar-wrapper-->
+
+<!--Start topbar header-->
+<header class="topbar-nav">
+  <nav class="navbar navbar-expand fixed-top gradient-scooter">
+   <ul class="navbar-nav mr-auto align-items-center">
+     <li class="nav-item">
+       <a class="nav-link toggle-menu" href="javascript:void();">
+        <i class="icon-menu menu-icon"></i>
+      </a>
+     </li>
+     <li class="nav-item">
+       <form >
+         
+          <a href="javascript:void();"></a>
+       </form>
+     </li>
+   </ul>
+      
+   <ul class="navbar-nav align-items-center right-nav-link">
+     
+     <li class="nav-item dropdown-lg">
+       <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+   
+       <div class="dropdown-menu dropdown-menu-right">
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item d-flex justify-content-between align-items-center">
+           You have 10 Notifications
+           <span class="badge badge-primary">10</span>
+           </li>
+           <li class="list-group-item">
+           <a href="javaScript:void();">
+            <div class="media">
+              <i class="icon-people fa-2x mr-3 text-info"></i>
+             <div class="media-body">
+             <h6 class="mt-0 msg-title">New Registered Users</h6>
+             <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+             </div>
+           </div>
+           </a>
+           </li>
+           <li class="list-group-item">
+           <a href="javaScript:void();">
+            <div class="media">
+              <i class="icon-cup fa-2x mr-3 text-warning"></i>
+             <div class="media-body">
+             <h6 class="mt-0 msg-title">New Received Orders</h6>
+             <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+             </div>
+           </div>
+           </a>
+           </li>
+           <li class="list-group-item">
+           <a href="javaScript:void();">
+            <div class="media">
+              <i class="icon-bell fa-2x mr-3 text-danger"></i>
+             <div class="media-body">
+             <h6 class="mt-0 msg-title">New Updates</h6>
+             <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+             </div>
+           </div>
+           </a>
+           </li>
+           <li class="list-group-item"><a href="javaScript:void();">See All Notifications</a></li>
+         </ul>
+       </div>
+     </li>
+     
+     <li class="nav-item">
+       <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+         <span class="user-profile"><img src="/media/{{profile}}" class="img-circle" alt="user avatar"></span>
+       </a>
+       <ul class="dropdown-menu dropdown-menu-right">
+        <li class="dropdown-item user-details">
+         <a href="javaScript:void();">
+            <div class="media">
+              <div class="avatar"><img class="align-self-start mr-3" src="/media/{{profile}}" alt="user avatar"></div>
+             <div class="media-body">
+             <h6 class="mt-2 user-title">{{company_name}}</h6>
+             <p class="user-subtitle">{{email}}</p>
+             </div>
+            </div>
+           </a>
+         </li>
+         <li class="dropdown-divider"></li>
+       
+         <li class="dropdown-divider"></li>
+
+         <li class="dropdown-divider"></li>
+         <a class="dropdown-item" href='/merchant/merchant_logout/'><i class="icon-power mr-2">Logout</i> </a>
+       </ul>
+     </li>
+   </ul>
+ </nav>
+ </header>
+<!--End topbar header-->
+
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumb-->
+     <div class="row pt-2 pb-2">
+        <div class="col-sm-9">
+		    <h4 class="page-title">Business Dashboard</h4>
+		    <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javaScript:void();">BestBuy</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Business Dashboard  {{message}}</li>
+         </ol>
+	   </div>
+	   </div> 
+    <!-- End Breadcrumb-->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <form id="personal-info" method ="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h4 class="form-header text-uppercase">
+                  <i class="fa fa-tags"></i>
+                   Coupon Details  
+                </h4>
+                <div class="form-group row">
+                    <label for="input-2" class="col-sm-2 col-form-label">Company Name </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="input-2" name="company"  value="{{company_name}}">
+                    </div>
+                  </div>
+                <div class="form-group row">
+                  <label for="input-1" class="col-sm-2 col-form-label">Upload Type</label>
+                  <div class="col-sm-10">
+
+                        <select  class="form-control" name="select"  onchange="showfield(this.options[this.selectedIndex].value)">
+                          <option selected="selected">Please select ...</option>
+                            <option value="coupons">COUPON CODE</option>
+                            <option value="deals">DEAL</option>
+                        </select>
+                           
+                  </div>
+                </div>
+                 <div>
+                  <div id="div1"></div>   
+                      
+                </div>
+                
+                <div class="form-group row">
+                  <label for="input-2" class="col-sm-2 col-form-label">Offer tittle</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input-2" name="offertitle"  required>
+                  </div>
+                </div>
+                 <div class="form-group row">
+                  <label for ="input-3" class="col-sm-2 col-form-label" >Expiry Date</label>
+                  <div class="col-sm-10">
+                  <input type="date" id="default-datepicker" class="form-control" name="expiry">
+                 </div>
+                </div>
+                
+                <div class="form-group row">
+                  <label for="basic-select"  class="col-sm-2 col-form-label">Coupon/Deal type</label>
+                  <div class="col-sm-10">
+                  <select class="form-control" id="basic-select" name="cdtype" >
+                                  <option selected="selected">Please select ...</option>
+                                  <option value="Seasonal-wise">Seosonal-wise</option>
+                                  <option value="Festival-wise">Festival-wise</option>
+                               
+                                </select>
+                  </div>
+                </div>
+               
+
+                <div class="form-group row">
+                  <label for="input-1" class="col-sm-2 col-form-label">SELECT YOUR CATEGORIES :</label>
+                  <div class="col-sm-10">
+
+                        <select  class="form-control" name="category"  onchange="showfield1(this.options[this.selectedIndex].value)">
+                          <option selected="selected">Please select ...</option>
+                                  {% for cat in cate %}
+                      <option value = "{{cat}}">{{ cat }}</option>
+                  {% endfor %}
+                        </select>
+                           
+                  </div>
+                </div>
+                <div>
+                  <div id="div2"></div>   
+                      
+                </div>
+                <div class="form-group row">
+                  <label for="input-8" class="col-sm-2 col-form-label">Select Images:(Dimesions should greater than pixels 1000*800)</label>
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control" id="fileUpload" name="image" multiple>
+              
+                    
+                  <div class="col-sm-10">
+                      
+                      
+                      <input type="button" value="Upload" onclick="return Upload()" />   
+                    </div>
+              </div>
+                  
+                </div>
+                <div class="form-group row">
+                  <label for="basic-textarea" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                  <textarea rows="4" class="form-control" id="basic-textarea" name="description" maxlength="35"></textarea>
+                  </div>
+                </div>
+                <div class="form-footer">
+                    <button type="reset" class="btn btn-danger"><i class="fa fa-times"></i> CANCEL</button>
+                    <button type="submit" class="btn btn-success" ><i class="fa fa-check-square-o"></i>SUBMIT </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!--End Row-->
+
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2018 Discounts and Coupons
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+   
+  </div><!--End wrapper-->
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="/static/merchant/assets/js/jquery.min.js"></script>
+  <script src="/static/merchant/assets/js/popper.min.js"></script>
+  <script src="/static/merchant/assets/js/bootstrap.min.js"></script>
+	
+	<!-- simplebar js -->
+	<script src="/static/merchant/assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- waves effect js -->
+  <script src="/static/merchant/assets/js/waves.js"></script>
+	<!-- sidebar-menu js -->
+	<script src="/static/merchant/assets/js/sidebar-menu.js"></script>
+  <!-- Custom scripts -->
+  <script src="/static/merchant/assets/js/app-script.js"></script>
+
+  <!--Form Validatin Script-->
+    <script src="/static/merchant/assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script>
+
+    $().ready(function() {
+
+    $("#personal-info").validate();
+
+   // validate signup form on keyup and submit
+    $("#signupForm").validate({
+        rules: {
+            firstname: "required",
+            lastname: "required",
+            username: {
+                required: true,
+                minlength: 2
+            },
+            password: {
+                required: true,
+                minlength: 5
+            },
+            confirm_password: {
+                required: true,
+                minlength: 5,
+                equalTo: "#password"
+            },
+            email: {
+                required: true,
+                email: true
+            },
+             contactnumber: {
+                required: true,
+                minlength: 10
+            },
+            topic: {
+                required: "#newsletter:checked",
+                minlength: 2
+            },
+            agree: "required"
+        },
+        messages: {
+            firstname: "Please enter your firstname",
+            lastname: "Please enter your lastname",
+            username: {
+                required: "Please enter a username",
+                minlength: "Your username must consist of at least 2 characters"
+            },
+            password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long"
+            },
+            confirm_password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long",
+                equalTo: "Please enter the same password as above"
+            },
+            email: "Please enter a valid email address",
+            contactnumber: "Please enter your 10 digit number",
+            agree: "Please accept our policy",
+            topic: "Please select at least 2 topics"
+        }
+    });
+
+});
+
+    </script>
+	
+</body>
+
+<!-- Mirrored from codervent.com/rocker/color-version/form-validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Sep 2018 03:48:36 GMT -->
+</html>

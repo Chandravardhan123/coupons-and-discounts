@@ -1,0 +1,4584 @@
+/*
+Template Name: WP Coupon
+Template Author: SmoothThemes - http://www.smooththemes.com
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Document
+3.0 Layout
+4.0 Elements
+5.0 Posts
+6.0 Pages
+7.0 Widgets
+8.0 User Area
+9.0 Supports
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+/* line 4, assets/sass/_reset.scss */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 9, assets/sass/_reset.scss */
+body {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 29, assets/sass/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 34, assets/sass/_reset.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 39, assets/sass/_reset.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 43, assets/sass/_reset.scss */
+a img {
+  border: 0;
+}
+
+/* line 52, assets/sass/_reset.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 59, assets/sass/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 67, assets/sass/_reset.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 73, assets/sass/_reset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 79, assets/sass/_reset.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 84, assets/sass/_reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 89, assets/sass/_reset.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 95, assets/sass/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 102, assets/sass/_reset.scss */
+sup {
+  bottom: 1ex;
+}
+
+/* line 105, assets/sass/_reset.scss */
+sub {
+  top: .5ex;
+}
+
+/* line 111, assets/sass/_reset.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 118, assets/sass/_reset.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 128, assets/sass/_reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 135, assets/sass/_reset.scss */
+button {
+  overflow: visible;
+}
+
+/* line 140, assets/sass/_reset.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 150, assets/sass/_reset.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 156, assets/sass/_reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 165, assets/sass/_reset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 171, assets/sass/_reset.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 177, assets/sass/_reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 185, assets/sass/_reset.scss */
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+
+/* line 191, assets/sass/_reset.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+
+/* line 198, assets/sass/_reset.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 204, assets/sass/_reset.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 209, assets/sass/_reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 213, assets/sass/_reset.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 219, assets/sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 225, assets/sass/_reset.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 229, assets/sass/_reset.scss */
+.clearfix:after, .box-item:after, .container:after, .st-menu:after, .store-listing-item:after, .widget-area .widget_categories .widget-content ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 237, assets/sass/_reset.scss */
+.clearfix, .box-item, .container, .st-menu, .store-listing-item, .widget-area .widget_categories .widget-content ul {
+  display: inline-block;
+}
+
+/* line 241, assets/sass/_reset.scss */
+.clearfix, .box-item, .container, .st-menu, .store-listing-item, .widget-area .widget_categories .widget-content ul {
+  display: block;
+}
+
+/* line 245, assets/sass/_reset.scss */
+.clear {
+  zoom: 1;
+}
+/* line 248, assets/sass/_reset.scss */
+.clear:before, .clear:after {
+  display: table;
+  content: "";
+}
+/* line 252, assets/sass/_reset.scss */
+.clear:after {
+  clear: both;
+}
+
+/* line 256, assets/sass/_reset.scss */
+.break, h1,
+h2,
+h3,
+h4,
+h5,
+h6, p, ul, ol, dl, blockquote, pre {
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+/* line 261, assets/sass/_reset.scss */
+.none {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+2.0 Document Setup
+--------------------------------------------------------------*/
+/*------------------------------
+	2.1 Typography
+------------------------------*/
+/* line 4, assets/sass/_document.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 14px;
+}
+
+/* line 12, assets/sass/_document.scss */
+body {
+  background: #f8f9f9;
+  height: 100%;
+}
+
+/* line 18, assets/sass/_document.scss */
+body, p {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+/* line 42, assets/sass/_document.scss */
+pre,
+code,
+input,
+textarea {
+  font: inherit;
+}
+
+/* line 46, assets/sass/_document.scss */
+::-moz-selection {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+/* line 51, assets/sass/_document.scss */
+::selection {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+/*------------------------------
+	2.2 Links
+------------------------------*/
+/* line 58, assets/sass/_document.scss */
+a {
+  color: #00979d;
+  text-decoration: none;
+}
+/* line 61, assets/sass/_document.scss */
+a:hover {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+/*------------------------------
+	2.3 Heading
+------------------------------*/
+/* line 75, assets/sass/_document.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: #222222;
+}
+/* line 83, assets/sass/_document.scss */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #222222;
+  text-decoration: none;
+}
+
+/* line 89, assets/sass/_document.scss */
+h1 {
+  line-height: 1.6;
+  font-size: 26px;
+  letter-spacing: -0.5px;
+}
+@media screen and (min-width: 790px) {
+  /* line 89, assets/sass/_document.scss */
+  h1 {
+    font-size: 35px;
+  }
+}
+/* line 96, assets/sass/_document.scss */
+h1 span {
+  font-weight: bold;
+}
+
+/* line 101, assets/sass/_document.scss */
+h2 {
+  line-height: 1.6;
+  font-size: 23px;
+}
+@media screen and (min-width: 790px) {
+  /* line 101, assets/sass/_document.scss */
+  h2 {
+    font-size: 26px;
+  }
+}
+
+/* line 109, assets/sass/_document.scss */
+h3 {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* line 114, assets/sass/_document.scss */
+h4 {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+/* line 119, assets/sass/_document.scss */
+h5 {
+  font-size: 15px;
+}
+
+/* line 123, assets/sass/_document.scss */
+h6 {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+/*------------------------------
+	2.4 Base
+------------------------------*/
+/* line 131, assets/sass/_document.scss */
+ul, ol, dl, p, details, address, .vcard, figure, pre, fieldset, table, dt, dd, hr {
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+/*------------------------------
+	2.5 Content
+------------------------------*/
+/* line 143, assets/sass/_document.scss */
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* line 150, assets/sass/_document.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 154, assets/sass/_document.scss */
+blockquote {
+  clear: both;
+  margin: 20px 0;
+}
+/* line 157, assets/sass/_document.scss */
+blockquote p {
+  font-style: italic;
+}
+/* line 160, assets/sass/_document.scss */
+blockquote cite {
+  font-style: normal;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+/* line 170, assets/sass/_document.scss */
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+/* line 174, assets/sass/_document.scss */
+figure {
+  margin: 0;
+}
+
+/* line 178, assets/sass/_document.scss */
+address {
+  margin: 20px 0;
+}
+
+/* line 182, assets/sass/_document.scss */
+hr {
+  border: 0;
+  border-top: 1px solid #e9e9e9;
+  height: 1px;
+  margin-bottom: 20px;
+}
+
+/* line 194, assets/sass/_document.scss */
+tt,
+kbd,
+pre,
+code,
+samp,
+var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  background-color: #e9e9e9;
+  padding: 5px 7px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* line 201, assets/sass/_document.scss */
+pre {
+  overflow: auto;
+  white-space: pre-wrap;
+  max-width: 100%;
+  line-height: 1.7;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+/* line 212, assets/sass/_document.scss */
+details summary {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* line 216, assets/sass/_document.scss */
+details :focus {
+  outline: none;
+}
+
+/* line 223, assets/sass/_document.scss */
+abbr,
+acronym,
+dfn {
+  cursor: help;
+  font-size: .95em;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #e9e9e9;
+  letter-spacing: 1px;
+}
+
+/* line 231, assets/sass/_document.scss */
+mark {
+  background-color: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 236, assets/sass/_document.scss */
+small {
+  font-size: 75%;
+}
+
+/* line 240, assets/sass/_document.scss */
+big {
+  font-size: 125%;
+}
+
+/* line 244, assets/sass/_document.scss */
+ul, ol {
+  padding-left: 20px;
+}
+
+/* line 248, assets/sass/_document.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 252, assets/sass/_document.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 256, assets/sass/_document.scss */
+ul li, ol li {
+  margin: 8px 0;
+}
+
+/* line 260, assets/sass/_document.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 264, assets/sass/_document.scss */
+dd {
+  margin: 0 20px 20px;
+}
+
+/*------------------------------
+	2.6 Table
+------------------------------*/
+/* line 271, assets/sass/_document.scss */
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #e9e9e9;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 284, assets/sass/_document.scss */
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  border: 1px solid #e9e9e9;
+  line-height: 1.42857;
+  padding: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 292, assets/sass/_document.scss */
+table > thead > tr > th, table > thead > tr > td {
+  border-bottom-width: 2px;
+}
+
+/* line 296, assets/sass/_document.scss */
+table th {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/*------------------------------
+	2.7 Form
+------------------------------*/
+/* line 305, assets/sass/_document.scss */
+fieldset {
+  padding: 20px;
+  border: 1px solid #e9e9e9;
+}
+
+/* line 310, assets/sass/_document.scss */
+input[type="reset"], input[type="submit"], input[type="submit"] {
+  cursor: pointer;
+  background: #00979d;
+  border: none;
+  display: inline-block;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  padding: 17px 23px 18px 23px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin: 3px 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+/* line 327, assets/sass/_document.scss */
+input[type="reset"]:hover, input[type="submit"]:hover, input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+/* line 335, assets/sass/_document.scss */
+input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover,
+input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
+button:hover, button:focus {
+  cursor: pointer;
+}
+
+/* line 339, assets/sass/_document.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 342, assets/sass/_document.scss */
+select {
+  max-width: 100%;
+  overflow: auto;
+  vertical-align: top;
+  outline: none;
+  border: 1px solid #e9e9e9;
+  padding: 10px;
+}
+
+/* line 364, assets/sass/_document.scss */
+textarea,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  cursor: pointer;
+  max-width: 100%;
+  background-color: transparent;
+  border: 1px solid #e9e9e9;
+  -webkit-appearance: none;
+  padding: 10px 15.38462px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 372, assets/sass/_document.scss */
+textarea:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  outline: none;
+  border-color: #00979d;
+}
+
+/* line 378, assets/sass/_document.scss */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 383, assets/sass/_document.scss */
+input[type="radio"], input[type="checkbox"] {
+  margin: 0 10px;
+}
+
+/* line 387, assets/sass/_document.scss */
+input, textarea, input[type="submit"]:focus {
+  outline: 0 none;
+}
+
+/*------------------------------
+	2.8 Accessibility
+------------------------------*/
+/* Text meant only for screen readers */
+/* line 395, assets/sass/_document.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+/* line 402, assets/sass/_document.scss */
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #aaaaaa;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  clip: auto !important;
+  color: #00979d;
+  display: block;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 17px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
+}
+
+/*------------------------------
+	2.9 Helper
+------------------------------*/
+/* line 421, assets/sass/_document.scss */
+.primary-color {
+  color: #00979d;
+}
+
+/* line 425, assets/sass/_document.scss */
+.secondary-color {
+  color: #ff9900;
+}
+
+/* line 429, assets/sass/_document.scss */
+.text-transform-none {
+  text-transform: none !important;
+}
+/* line 431, assets/sass/_document.scss */
+.text-transform-none h1, .text-transform-none h2, .text-transform-none h3, .text-transform-none h4, .text-transform-none h5 {
+  text-transform: none !important;
+}
+
+/* line 436, assets/sass/_document.scss */
+.fleft {
+  float: left;
+}
+
+/* line 440, assets/sass/_document.scss */
+.fright {
+  float: right;
+}
+
+/* line 444, assets/sass/_document.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 448, assets/sass/_document.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 452, assets/sass/_document.scss */
+.primary-colored {
+  color: #00979d;
+}
+
+/* line 456, assets/sass/_document.scss */
+.box-item {
+  padding: 20px 20px 16px 20px;
+  margin-bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+/* line 2, assets/sass/_layout.scss */
+.site {
+  margin: 0 auto;
+}
+
+/* line 6, assets/sass/_layout.scss */
+.container {
+  max-width: 1130px;
+  padding: 0px 25px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (min-width: 790px) {
+  /* line 6, assets/sass/_layout.scss */
+  .container {
+    padding: 0px 30px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  /* line 6, assets/sass/_layout.scss */
+  .container {
+    padding: 0px 50px;
+  }
+}
+
+/* line 21, assets/sass/_layout.scss */
+.site-content #content-wrap {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* line 57, assets/sass/_layout.scss */
+.content-area {
+  width: 100%;
+  float: none;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 790px) {
+  /* line 57, assets/sass/_layout.scss */
+  .content-area {
+    width: 66.01942%;
+    float: left;
+    padding-bottom: 0px;
+  }
+}
+
+/* line 67, assets/sass/_layout.scss */
+.sidebar {
+  width: 100%;
+  float: none;
+}
+@media screen and (min-width: 790px) {
+  /* line 67, assets/sass/_layout.scss */
+  .sidebar {
+    width: 29.12621%;
+    float: left;
+  }
+}
+
+/* line 76, assets/sass/_layout.scss */
+.content-box {
+  padding: 30px;
+}
+
+/* line 80, assets/sass/_layout.scss */
+.no-sidebar .content-box {
+  padding: 40px;
+}
+
+/* line 84, assets/sass/_layout.scss */
+.no-sidebar .content-area {
+  width: 100%;
+}
+
+@media screen and (min-width: 790px) {
+  /* line 89, assets/sass/_layout.scss */
+  .left-sidebar .content-area {
+    float: right;
+  }
+
+  /* line 101, assets/sass/_layout.scss */
+  .right-sidebar .sidebar {
+    float: right;
+  }
+}
+/*--------------------------------------------------------------
+4.0 Elements
+--------------------------------------------------------------*/
+/*------------------------------
+	4.1 Header
+------------------------------*/
+/* line 5, assets/sass/_elements.scss */
+.site-header .logo_area {
+  margin-top: 9px;
+}
+@media screen and (max-width: 500px) {
+  /* line 5, assets/sass/_elements.scss */
+  .site-header .logo_area {
+    float: none;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+/* line 15, assets/sass/_elements.scss */
+.primary-header {
+  padding: 18px 0px;
+  background: #222222;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* line 22, assets/sass/_elements.scss */
+.title_area .site-title {
+  line-height: 1;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+/* line 29, assets/sass/_elements.scss */
+.title_area .site-title a {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 33, assets/sass/_elements.scss */
+.title_area .site-description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* line 45, assets/sass/_elements.scss */
+.site-navigation {
+  background: #FFFFFF;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+/* Header Hightlight
+------------------------------*/
+/* line 53, assets/sass/_elements.scss */
+.header-highlight {
+  display: none;
+}
+/* line 54, assets/sass/_elements.scss */
+.header-highlight a {
+  margin-left: 30px;
+  margin-top: 7px;
+  display: inline-block;
+}
+/* line 58, assets/sass/_elements.scss */
+.header-highlight a .highlight-icon {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 65, assets/sass/_elements.scss */
+.header-highlight a .highlight-text {
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+/* line 73, assets/sass/_elements.scss */
+.header-highlight a:hover .highlight-text, .header-highlight a:hover .highlight-icon {
+  color: #ffffff;
+}
+/* line 77, assets/sass/_elements.scss */
+.header-highlight a:first-child {
+  margin-left: 60px;
+}
+@media screen and (min-width: 1100px) {
+  /* line 53, assets/sass/_elements.scss */
+  .header-highlight {
+    display: block;
+  }
+}
+
+/* Search Form
+------------------------------*/
+@media screen and (max-width: 790px) {
+  /* line 89, assets/sass/_elements.scss */
+  #header-search {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 89, assets/sass/_elements.scss */
+  #header-search {
+    float: none;
+    text-align: center;
+    display: inline-block;
+  }
+}
+/* line 98, assets/sass/_elements.scss */
+#header-search .search-sample {
+  display: block;
+  font-size: 11px;
+  margin-top: 7px;
+  line-height: 1;
+}
+/* line 103, assets/sass/_elements.scss */
+#header-search .search-sample a {
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 2px;
+}
+/* line 106, assets/sass/_elements.scss */
+#header-search .search-sample a:hover {
+  color: #FFFFFF;
+}
+/* line 110, assets/sass/_elements.scss */
+#header-search .search-sample span {
+  margin-right: 10px;
+}
+@media screen and (max-width: 790px) {
+  /* line 98, assets/sass/_elements.scss */
+  #header-search .search-sample {
+    display: none;
+  }
+}
+/* line 117, assets/sass/_elements.scss */
+#header-search .header-search-input {
+  float: right;
+}
+@media screen and (max-width: 500px) {
+  /* line 117, assets/sass/_elements.scss */
+  #header-search .header-search-input {
+    float: none;
+    text-align: center;
+  }
+}
+/* line 124, assets/sass/_elements.scss */
+#header-search input[type="text"] {
+  font-size: 15px;
+  border: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+@media screen and (min-width: 790px) {
+  /* line 124, assets/sass/_elements.scss */
+  #header-search input[type="text"] {
+    width: 300px;
+  }
+}
+/* line 132, assets/sass/_elements.scss */
+#header-search .header-search-submit {
+  background: #00979d;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+/* line 141, assets/sass/_elements.scss */
+#header-search .result {
+  display: flex;
+  position: relative;
+}
+/* line 145, assets/sass/_elements.scss */
+#header-search .result a {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+/* line 155, assets/sass/_elements.scss */
+#header-search .results .result .image + .content {
+  margin: 0px;
+  align-self: center;
+}
+/* line 159, assets/sass/_elements.scss */
+#header-search .results .image {
+  float: left;
+  margin-right: 1em;
+  flex: 0 0 auto;
+  align-self: center;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+/* line 166, assets/sass/_elements.scss */
+#header-search .results .result .image img {
+  width: 90px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 172, assets/sass/_elements.scss */
+  .header_right.fright {
+    float: none;
+    text-align: center;
+  }
+}
+/* Primary Navigation
+------------------------------*/
+/* line 181, assets/sass/_elements.scss */
+.st-menu, .st-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 189, assets/sass/_elements.scss */
+.st-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+/* line 196, assets/sass/_elements.scss */
+.st-menu .menu-box {
+  position: absolute;
+  display: none;
+  top: 100%;
+  right: 0;
+  z-index: 99;
+}
+/* line 203, assets/sass/_elements.scss */
+.st-menu li:hover > .menu-box, .st-menu li.sfHover > .menu-box {
+  display: block;
+}
+/* line 206, assets/sass/_elements.scss */
+.st-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+/* line 210, assets/sass/_elements.scss */
+.st-menu li {
+  position: relative;
+}
+/* line 213, assets/sass/_elements.scss */
+.st-menu > li {
+  float: left;
+}
+/* line 216, assets/sass/_elements.scss */
+.st-menu li:hover > ul, .st-menu li.sfHover > ul {
+  display: block;
+}
+/* line 219, assets/sass/_elements.scss */
+.st-menu a {
+  display: block;
+  position: relative;
+}
+
+/* line 227, assets/sass/_elements.scss */
+.st-menu ul {
+  min-width: 12em;
+  *width: 12em;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.05);
+  padding-bottom: 7px;
+  background: #FFFFFF;
+}
+/* line 235, assets/sass/_elements.scss */
+.st-menu ul ul {
+  padding-top: 7px;
+}
+/* line 238, assets/sass/_elements.scss */
+.st-menu li {
+  white-space: nowrap;
+  *white-space: normal;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+/* line 245, assets/sass/_elements.scss */
+.st-menu > li:first-child > a {
+  padding-left: 0px;
+}
+/* line 248, assets/sass/_elements.scss */
+.st-menu > li > a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  padding: 18px 13px 19px;
+}
+/* line 256, assets/sass/_elements.scss */
+.st-menu li:hover,
+.st-menu li.sfHover {
+  -webkit-transition: none;
+  transition: none;
+}
+/* line 265, assets/sass/_elements.scss */
+.st-menu a {
+  color: #888888;
+  padding: 7px 20px;
+  font-size: 13px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  zoom: 1;
+}
+/* line 275, assets/sass/_elements.scss */
+.st-menu a:hover {
+  color: #00979d;
+}
+/* line 278, assets/sass/_elements.scss */
+.st-menu a i {
+  margin-right: 0px;
+  font-size: 13px;
+}
+/* line 283, assets/sass/_elements.scss */
+.st-menu li.current-menu-item a {
+  color: #00979d;
+}
+
+/* line 290, assets/sass/_elements.scss */
+.sf-arrows .sf-with-ul {
+  padding-right: 2.5em;
+  *padding-right: 1em;
+}
+/* line 294, assets/sass/_elements.scss */
+.sf-arrows .sf-with-ul:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -3px;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-top-color: #cccccc;
+}
+/* line 308, assets/sass/_elements.scss */
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+  border-top-color: #00979d;
+  opacity: 0.5;
+}
+/* line 312, assets/sass/_elements.scss */
+.sf-arrows ul .sf-with-ul:after {
+  margin-top: -5px;
+  margin-right: -3px;
+  border-color: transparent;
+  border-left-color: #cccccc;
+}
+/* line 320, assets/sass/_elements.scss */
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+  border-left-color: #00979d;
+  opacity: 0.5;
+}
+
+/* line 327, assets/sass/_elements.scss */
+#nav-toggle {
+  display: none;
+  font-size: 20px;
+  padding: 13px 0 11px;
+  margin-left: -3px;
+  cursor: pointer;
+  color: #777777;
+}
+
+/* line 335, assets/sass/_elements.scss */
+.nav-toggle-subarrow {
+  display: none;
+}
+
+@media screen and (max-width: 790px) {
+  /* line 339, assets/sass/_elements.scss */
+  .primary-navigation .st-menu {
+    width: 100% !important;
+    display: none;
+  }
+
+  /* line 343, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border-top: 1px solid #e9e9e9;
+    z-index: 100;
+  }
+  /* line 351, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile > li > a {
+    padding: 12px 20px;
+  }
+  /* line 354, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile ul {
+    box-shadow: none;
+    background: #FFFFFF;
+    padding-bottom: 0;
+    border-top: 1px solid #e9e9e9;
+    position: static!important;
+    display: none!important;
+  }
+  /* line 361, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile ul li:last-child {
+    border-bottom: none;
+  }
+  /* line 364, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile ul li a {
+    padding: 12px 35px;
+  }
+  /* line 367, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile ul li li a {
+    padding: 12px 70px;
+  }
+  /* line 374, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile li {
+    border-bottom: 1px solid #e9e9e9;
+    float: none!important;
+    display: block!important;
+    width: 100%!important;
+  }
+  /* line 380, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile .nav-toggle-subarrow {
+    display: block;
+    color: #999999;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    text-align: center;
+    padding: 12px 20px 11px;
+  }
+  /* line 391, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile .nav-toggle-dropdown > .nav-toggle-subarrow i.icon.plus:before {
+    content: "\f068";
+  }
+  /* line 394, assets/sass/_elements.scss */
+  .st-menu.st-menu-mobile .nav-toggle-dropdown > ul {
+    display: block !important;
+  }
+
+  /* line 399, assets/sass/_elements.scss */
+  #nav-toggle {
+    display: block;
+  }
+}
+/* Header User Action Menu
+------------------------------*/
+/* line 407, assets/sass/_elements.scss */
+.nav-user-action .st-menu {
+  position: relative;
+}
+/* line 409, assets/sass/_elements.scss */
+.nav-user-action .st-menu > li:last-child > a {
+  padding-right: 0;
+}
+/* line 412, assets/sass/_elements.scss */
+.nav-user-action .st-menu > li:first-child > a {
+  padding-left: 0;
+}
+/* line 415, assets/sass/_elements.scss */
+.nav-user-action .st-menu > li {
+  position: static;
+}
+/* line 418, assets/sass/_elements.scss */
+.nav-user-action .st-menu > li > a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 400px) {
+  /* line 418, assets/sass/_elements.scss */
+  .nav-user-action .st-menu > li > a {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 11px;
+    padding-top: 20px;
+  }
+}
+/* line 428, assets/sass/_elements.scss */
+.nav-user-action .st-menu ul {
+  right: 0;
+  left: auto;
+}
+/* line 432, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box {
+  background: #FFFFFF;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.05);
+  min-width: 300px;
+  padding: 15px 30px 20px;
+  overflow: hidden;
+  white-space: normal;
+}
+@media screen and (max-width: 400px) {
+  /* line 432, assets/sass/_elements.scss */
+  .nav-user-action .st-menu .menu-box {
+    width: 100%;
+    right: -15px;
+  }
+}
+/* line 444, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .menu-box-title {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  display: block;
+  margin-bottom: 20px;
+}
+/* line 451, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .saved-coupon {
+  padding-bottom: 15px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #e9e9e9;
+}
+/* line 455, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .saved-coupon:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+}
+/* line 460, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .saved-coupon .store-thumb {
+  width: 80px;
+  height: auto;
+  float: left;
+  margin-right: 15px;
+}
+/* line 466, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .saved-coupon .coupon-text {
+  overflow: hidden;
+}
+/* line 468, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .saved-coupon .coupon-text a {
+  font-size: 13px;
+  line-height: 1.5;
+}
+/* line 474, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .exp-text {
+  font-size: 10px;
+  display: block;
+  margin-top: 2px;
+  font-style: italic;
+}
+/* line 480, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box a {
+  padding: 0;
+  color: #00979d;
+  font-size: 14px;
+}
+/* line 484, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box a:hover {
+  color: #ff9900;
+}
+/* line 488, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .store-thumb a {
+  line-height: 64px;
+}
+/* line 491, assets/sass/_elements.scss */
+.nav-user-action .st-menu .menu-box .more-links {
+  display: block;
+  margin-top: 20px;
+}
+
+/* line 498, assets/sass/_elements.scss */
+.store-thumb a {
+  border: 2px solid #f5f5f5;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  display: block;
+}
+/* line 502, assets/sass/_elements.scss */
+.store-thumb a:hover {
+  border-color: #ff9900;
+}
+
+/*------------------------------
+	4.2 Content
+------------------------------*/
+/* Content Related Elements
+------------------------------*/
+/* line 513, assets/sass/_elements.scss */
+.content-box {
+  margin-bottom: 30px;
+}
+
+/* Popular Stores
+------------------------------*/
+/* line 519, assets/sass/_elements.scss */
+.popular-stores {
+  background: #FFFFFF;
+  padding: 10px;
+}
+/* line 523, assets/sass/_elements.scss */
+.popular-stores .store-thumb a {
+  text-align: center;
+  line-height: 0px;
+}
+/* line 528, assets/sass/_elements.scss */
+.popular-stores .store-name a {
+  text-align: center;
+  display: block;
+  font-size: 13px;
+  margin-top: 7px;
+  margin-bottom: -3px;
+  color: #666666;
+}
+/* line 535, assets/sass/_elements.scss */
+.popular-stores .store-name a:hover {
+  color: #00979d;
+}
+/* line 539, assets/sass/_elements.scss */
+.popular-stores .owl-item {
+  padding: 10px 10px;
+}
+/* line 542, assets/sass/_elements.scss */
+.popular-stores .owl-controls .owl-prev {
+  left: -50px;
+}
+@media screen and (max-width: 1100px) {
+  /* line 542, assets/sass/_elements.scss */
+  .popular-stores .owl-controls .owl-prev {
+    left: auto;
+    right: 10px;
+    top: -35px;
+    opacity: 0.8;
+  }
+  /* line 549, assets/sass/_elements.scss */
+  .popular-stores .owl-controls .owl-prev img {
+    width: 8px;
+    height: auto;
+  }
+}
+/* line 555, assets/sass/_elements.scss */
+.popular-stores .owl-controls .owl-next {
+  right: -50px;
+}
+@media screen and (max-width: 1100px) {
+  /* line 555, assets/sass/_elements.scss */
+  .popular-stores .owl-controls .owl-next {
+    right: -10px;
+    top: -35px;
+    opacity: 0.8;
+  }
+  /* line 561, assets/sass/_elements.scss */
+  .popular-stores .owl-controls .owl-next img {
+    width: 8px;
+    height: auto;
+  }
+}
+
+/* line 569, assets/sass/_elements.scss */
+.popular-stores.inside-content {
+  padding: 0px;
+  margin: 0px -10px;
+}
+/* line 572, assets/sass/_elements.scss */
+.popular-stores.inside-content .store-carousel .owl-next {
+  top: -25px;
+  right: 10px;
+  opacity: 1;
+}
+/* line 576, assets/sass/_elements.scss */
+.popular-stores.inside-content .store-carousel .owl-next img {
+  width: 8px;
+}
+/* line 580, assets/sass/_elements.scss */
+.popular-stores.inside-content .store-carousel .owl-prev {
+  top: -25px;
+  right: 30px;
+  left: auto;
+  opacity: 1;
+}
+/* line 585, assets/sass/_elements.scss */
+.popular-stores.inside-content .store-carousel .owl-prev img {
+  width: 8px;
+}
+
+/* line 590, assets/sass/_elements.scss */
+.inside-content.shadow-box {
+  box-shadow: none;
+}
+
+/* Fix white place in thumbnail*/
+/* line 595, assets/sass/_elements.scss */
+.store-thumb, .ui.image, .store-thumb a {
+  line-height: 0px;
+}
+
+/* line 599, assets/sass/_elements.scss */
+.store-listing-item {
+  padding: 20px 20px 16px 20px;
+  margin-bottom: 15px;
+}
+/* line 603, assets/sass/_elements.scss */
+.store-listing-item:last-child {
+  margin-bottom: 0;
+}
+/* line 606, assets/sass/_elements.scss */
+.store-listing-item .store-thumb-link {
+  float: none;
+  display: block;
+  margin-right: 0;
+}
+@media screen and (min-width: 400px) {
+  /* line 606, assets/sass/_elements.scss */
+  .store-listing-item .store-thumb-link {
+    float: none;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 500px) {
+  /* line 606, assets/sass/_elements.scss */
+  .store-listing-item .store-thumb-link {
+    float: left;
+    margin-right: 20px;
+  }
+}
+/* line 618, assets/sass/_elements.scss */
+.store-listing-item .store-thumb-link .store-thumb {
+  max-width: 150px;
+  line-height: 0px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 500px) {
+  /* line 618, assets/sass/_elements.scss */
+  .store-listing-item .store-thumb-link .store-thumb {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/* line 627, assets/sass/_elements.scss */
+.store-listing-item .store-thumb-link .store-name a {
+  display: inline-block;
+  line-height: 1;
+  font-size: 13px;
+  color: #666666;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  /* line 627, assets/sass/_elements.scss */
+  .store-listing-item .store-thumb-link .store-name a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* line 637, assets/sass/_elements.scss */
+.store-listing-item .store-thumb-link .store-name a:hover {
+  color: #00979d;
+}
+/* line 640, assets/sass/_elements.scss */
+.store-listing-item .store-thumb-link .store-name a i {
+  margin-left: -3px;
+}
+/* line 645, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon {
+  max-width: 100%;
+  max-width: 250px;
+  margin-right: 0px;
+  float: left;
+}
+@media screen and (min-width: 400px) {
+  /* line 645, assets/sass/_elements.scss */
+  .store-listing-item .latest-coupon {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 500px) {
+  /* line 645, assets/sass/_elements.scss */
+  .store-listing-item .latest-coupon {
+    margin-right: 20px;
+    max-width: 293px;
+  }
+}
+@media screen and (min-width: 790px) {
+  /* line 645, assets/sass/_elements.scss */
+  .store-listing-item .latest-coupon {
+    margin-right: 10px;
+    max-width: 228px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  /* line 645, assets/sass/_elements.scss */
+  .store-listing-item .latest-coupon {
+    max-width: 250px;
+    margin-right: 20px;
+  }
+}
+/* line 666, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  margin-top: -2px;
+  line-height: 1.5;
+}
+/* line 672, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-title a {
+  color: #00979d;
+}
+/* line 674, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-title a:hover {
+  color: #ff9900;
+}
+/* line 679, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-des {
+  font-size: 13px;
+  line-height: 1.7;
+  position: relative;
+    /*
+  	.coupon-des-full {
+		display: none;
+  	}
+  	*/
+  			/*
+  			.coupon-des-ellip {
+  				float: left;
+  			    max-width: 100%;
+  			    height: 50px;
+  			  	position: relative;
+  			  	overflow: hidden;
+  			  	p {
+  				  	margin-bottom: 0px;
+  				}
+  
+  			}
+  			*/
+}
+/* line 684, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-des .coupon-des-ellip {
+  width: 87%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  position: relative;
+}
+/* line 691, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-des .coupon-des-ellip p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+/* line 698, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-des .coupon-des-ellip:after {
+  content: "Less";
+  cursor: pointer;
+  color: #00979d;
+  margin-left: 4px;
+}
+/* line 730, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-des .coupon-des-ellip:after {
+  display: none;
+}
+/* line 733, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-des.show-full:after {
+  display: none;
+}
+/* line 736, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-des.show-full .coupon-des-ellip {
+  overflow: inherit;
+  white-space: inherit;
+  word-wrap: inherit;
+}
+/* line 741, assets/sass/_elements.scss */
+.store-listing-item .latest-coupon .coupon-des.show-full .coupon-des-ellip:after {
+  display: inline;
+}
+/* line 746, assets/sass/_elements.scss */
+.store-listing-item .coupon-detail {
+  margin-top: 25px;
+  float: left;
+}
+@media screen and (min-width: 400px) {
+  /* line 746, assets/sass/_elements.scss */
+  .store-listing-item .coupon-detail {
+    float: left;
+  }
+}
+@media screen and (min-width: 500px) {
+  /* line 746, assets/sass/_elements.scss */
+  .store-listing-item .coupon-detail {
+    float: right;
+  }
+}
+/* line 755, assets/sass/_elements.scss */
+.store-listing-item .coupon-detail .exp-text {
+  font-size: 13px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: -2px;
+  color: #888888;
+}
+/* line 763, assets/sass/_elements.scss */
+.store-listing-item .coupon-save {
+  float: right;
+  font-size: 15px;
+  margin-right: -4px;
+  margin-top: -2px;
+  color: #999999;
+}
+/* line 769, assets/sass/_elements.scss */
+.store-listing-item .coupon-save:hover {
+  color: #00979d;
+}
+/* line 773, assets/sass/_elements.scss */
+.store-listing-item .coupon-saved {
+  color: #00979d;
+}
+
+/* Coupon Modal
+------------------------------*/
+/* line 784, assets/sass/_elements.scss */
+.coupon-modal {
+  background: #f8f9f9;
+}
+/* line 786, assets/sass/_elements.scss */
+.coupon-modal .coupon-header {
+  padding: 10px 25px 30px;
+  position: relative;
+  background: #ffffff;
+}
+@media screen and (min-width: 500px) {
+  /* line 786, assets/sass/_elements.scss */
+  .coupon-modal .coupon-header {
+    padding: 10px 25px 10px;
+  }
+}
+/* line 793, assets/sass/_elements.scss */
+.coupon-modal .coupon-header .coupon-store-thumb {
+  float: none;
+  display: block;
+  text-align: center;
+  margin-right: 0px;
+}
+/* line 798, assets/sass/_elements.scss */
+.coupon-modal .coupon-header .coupon-store-thumb img {
+  max-height: 50px;
+  width: auto;
+}
+@media screen and (min-width: 500px) {
+  /* line 793, assets/sass/_elements.scss */
+  .coupon-modal .coupon-header .coupon-store-thumb {
+    float: left;
+    margin-right: 10px;
+  }
+}
+/* line 807, assets/sass/_elements.scss */
+.coupon-modal .coupon-header .coupon-title {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-top: 11px;
+  max-width: 100%;
+  padding-right: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  color: #222222;
+}
+@media screen and (min-width: 500px) {
+  /* line 807, assets/sass/_elements.scss */
+  .coupon-modal .coupon-header .coupon-title {
+    float: left;
+    max-width: 73%;
+  }
+}
+/* line 823, assets/sass/_elements.scss */
+.coupon-modal .coupon-header .close {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background: url(assets/images/close.svg) no-repeat center center;
+}
+/* line 833, assets/sass/_elements.scss */
+.coupon-modal .coupon-content {
+  padding: 30px 0 35px;
+  margin: 0 4%;
+  width: 92%;
+}
+@media screen and (min-width: 500px) {
+  /* line 833, assets/sass/_elements.scss */
+  .coupon-modal .coupon-content {
+    width: 60%;
+    padding: 50px 0 55px;
+    margin: 0 20%;
+  }
+}
+/* line 842, assets/sass/_elements.scss */
+.coupon-modal .coupon-content p.coupon-type-text {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 500px) {
+  /* line 842, assets/sass/_elements.scss */
+  .coupon-modal .coupon-content p.coupon-type-text {
+    font-size: 13px;
+  }
+}
+/* line 852, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .modal-code {
+  background: #FFFFFF;
+  text-align: center;
+  margin-bottom: 17px;
+}
+/* line 856, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .modal-code .code-text {
+  display: inline-block;
+  margin: 20px;
+  padding: 8px 0px 10px;
+  font-size: 25px;
+  font-weight: bold;
+  border: 2px dashed #ff9900;
+  background: #fff1db;
+  color: #000000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width: 86%;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 500px) {
+  /* line 856, assets/sass/_elements.scss */
+  .coupon-modal .coupon-content .modal-code .code-text {
+    font-size: 30px;
+    width: 90%;
+  }
+}
+/* line 874, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .user-ratting {
+  float: left;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+/* line 875, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .user-ratting .ui.button {
+  border-radius: 2px;
+  font-size: 20px;
+  padding: 8px;
+  border-color: #DDDDDD;
+  box-shadow: none;
+}
+/* line 881, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .user-ratting .ui.button i {
+  color: #999999;
+}
+/* line 884, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .user-ratting .ui.button:hover i {
+  color: #00979d;
+}
+/* line 893, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .go-store {
+  float: right;
+}
+/* line 896, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .deal-actived {
+  display: inline-block;
+  margin: 20px 0px;
+  padding: 15px 26px;
+}
+/* line 901, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .user-ratting-text {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+/* line 906, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .show-detail {
+  float: right;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-right: -6px;
+}
+/* line 912, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .show-detail a {
+  color: #666666;
+}
+/* line 914, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .show-detail a:hover {
+  color: #00979d;
+}
+/* line 918, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .show-detail .show-detail-on {
+  color: #00979d;
+}
+/* line 922, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .coupon-popup-detail {
+  margin-top: 30px;
+}
+/* line 924, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .coupon-popup-detail p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+/* line 927, assets/sass/_elements.scss */
+.coupon-modal .coupon-content .coupon-popup-detail p:last-child {
+  margin-bottom: 0px;
+}
+/* line 933, assets/sass/_elements.scss */
+.coupon-modal .coupon-footer {
+  padding: 10px 25px;
+  background: #ffffff;
+}
+/* line 936, assets/sass/_elements.scss */
+.coupon-modal .coupon-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 500px) {
+  /* line 940, assets/sass/_elements.scss */
+  .coupon-modal .coupon-footer ul li {
+    padding: 0;
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+  }
+  /* line 955, assets/sass/_elements.scss */
+  .coupon-modal .coupon-footer ul li:first-child {
+    margin-left: 0px;
+  }
+  /* line 958, assets/sass/_elements.scss */
+  .coupon-modal .coupon-footer ul li:last-child {
+    float: right;
+    margin-left: 0px;
+  }
+}
+/* line 963, assets/sass/_elements.scss */
+.coupon-modal .coupon-footer ul li a, .coupon-modal .coupon-footer ul li span {
+  font-size: 12px;
+  color: #999999;
+}
+/* line 966, assets/sass/_elements.scss */
+.coupon-modal .coupon-footer ul li a i, .coupon-modal .coupon-footer ul li span i {
+  margin-left: 0px;
+  margin-right: 0px;
+  color: #CCCCCC;
+}
+/* line 972, assets/sass/_elements.scss */
+.coupon-modal .coupon-footer ul li a:hover {
+  color: #00979d;
+}
+
+/* line 980, assets/sass/_elements.scss */
+.coupon-deal-modal .show-detail {
+  margin-top: -50px;
+}
+
+/* line 985, assets/sass/_elements.scss */
+.coupon-listing-item {
+  padding-bottom: 0px;
+}
+/* line 987, assets/sass/_elements.scss */
+.coupon-listing-item .store-thumb-link .store-thumb {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 790px) {
+  /* line 987, assets/sass/_elements.scss */
+  .coupon-listing-item .store-thumb-link .store-thumb {
+    margin-bottom: 0px;
+  }
+}
+/* line 993, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail {
+  margin-top: 10px;
+}
+/* line 995, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail .coupon-button {
+  margin-bottom: 10px;
+}
+/* line 999, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail .user-ratting i {
+  font-size: 18px;
+  color: #999999;
+}
+/* line 1003, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail .user-ratting .ui.button {
+  padding: 6px 6px 8px;
+}
+/* line 1005, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail .user-ratting .ui.button:hover i {
+  color: #00979d;
+}
+/* line 1009, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail .user-ratting .ui.button.active {
+  background: none;
+}
+/* line 1011, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail .user-ratting .ui.button.active i {
+  color: #00979d;
+}
+/* line 1016, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail .ui.basic.buttons {
+  border-radius: 2px;
+}
+/* line 1019, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-detail .voted-value {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+/* line 1026, assets/sass/_elements.scss */
+.coupon-listing-item .c-type {
+  margin: 0px 0px 4px;
+  display: inline-block;
+}
+/* line 1029, assets/sass/_elements.scss */
+.coupon-listing-item .c-type .c-code {
+  background: #b9dc2f;
+  color: #FFFFFF;
+  padding: 4px 10px 4px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 1041, assets/sass/_elements.scss */
+.coupon-listing-item .c-type .c-sale {
+  background: #ea4c89;
+  padding: 3px 10px 5px;
+}
+/* line 1045, assets/sass/_elements.scss */
+.coupon-listing-item .c-type .c-print {
+  background: #2d3538;
+}
+/* line 1048, assets/sass/_elements.scss */
+.coupon-listing-item .c-type .exp {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 10px;
+}
+/* line 1055, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer {
+  margin: 18px -20px 0px;
+  padding: 10px 20px 12px;
+  border-top: 1px solid #f5f5f5;
+}
+/* line 1059, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+/* line 1063, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer ul li {
+  margin: 0;
+}
+@media screen and (max-width: 500px) {
+  /* line 1063, assets/sass/_elements.scss */
+  .coupon-listing-item .coupon-listing-footer ul li {
+    width: 50%;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 500px) {
+  /* line 1063, assets/sass/_elements.scss */
+  .coupon-listing-item .coupon-listing-footer ul li {
+    padding: 0;
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+  }
+  /* line 1078, assets/sass/_elements.scss */
+  .coupon-listing-item .coupon-listing-footer ul li:first-child {
+    margin-left: 0px;
+  }
+  /* line 1081, assets/sass/_elements.scss */
+  .coupon-listing-item .coupon-listing-footer ul li:last-child {
+    float: right;
+    margin-left: 0px;
+  }
+}
+/* line 1086, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer ul li a, .coupon-listing-item .coupon-listing-footer ul li span {
+  font-size: 12px;
+  color: #999999;
+}
+/* line 1089, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer ul li a i, .coupon-listing-item .coupon-listing-footer ul li span i {
+  margin-left: 0px;
+  margin-right: 0px;
+  color: #cccccc;
+}
+/* line 1095, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer ul li a:hover, .coupon-listing-item .coupon-listing-footer ul li a.active {
+  color: #00979d;
+}
+/* line 1100, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer .reveal-content {
+  padding: 30px 20px 40px;
+  border-top: 1px solid #f5f5f5;
+  margin: 12px -20px -12px;
+  display: none;
+  position: relative;
+}
+@media screen and (min-width: 500px) {
+  /* line 1100, assets/sass/_elements.scss */
+  .coupon-listing-item .coupon-listing-footer .reveal-content {
+    padding: 30px 50px 40px;
+  }
+}
+@media screen and (min-width: 790px) {
+  /* line 1100, assets/sass/_elements.scss */
+  .coupon-listing-item .coupon-listing-footer .reveal-content {
+    padding: 30px 90px 40px;
+  }
+}
+/* line 1112, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer .reveal-content h4 {
+  font-weight: 300;
+  letter-spacing: -0.1px;
+}
+/* line 1116, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer .reveal-content .close {
+  position: absolute;
+  right: 25px;
+  top: 35px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background: url(assets/images/close.svg) no-repeat center center;
+}
+/* line 1126, assets/sass/_elements.scss */
+.coupon-listing-item .coupon-listing-footer .reveal-content.active {
+  display: block;
+}
+
+/* line 1131, assets/sass/_elements.scss */
+.coupon-status-heading {
+  display: block;
+  margin-top: 30px;
+}
+
+/* List Categories
+------------------------------*/
+/* line 1138, assets/sass/_elements.scss */
+.list-categories {
+  padding: 13px 20px;
+}
+/* line 1140, assets/sass/_elements.scss */
+.list-categories ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 1144, assets/sass/_elements.scss */
+.list-categories ul li {
+  margin: 0;
+  width: 100%;
+  float: left;
+  display: inline-block;
+  position: relative;
+}
+@media screen and (min-width: 500px) {
+  /* line 1144, assets/sass/_elements.scss */
+  .list-categories ul li {
+    width: 33.333333%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  /* line 1144, assets/sass/_elements.scss */
+  .list-categories ul li {
+    width: 25%;
+  }
+}
+/* line 1156, assets/sass/_elements.scss */
+.list-categories ul li a {
+  width: 100%;
+  padding: 7px 0px 7px 7px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+}
+/* line 1166, assets/sass/_elements.scss */
+.list-categories ul li a span {
+  display: none;
+}
+
+/* Coupon Feature App
+------------------------------*/
+/* line 1186, assets/sass/_elements.scss */
+.coupon-app-wrapper {
+  background: #FFFFFF;
+  border-top: 1px solid #eeeeee;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1100px) {
+  /* line 1186, assets/sass/_elements.scss */
+  .coupon-app-wrapper {
+    padding-bottom: 0;
+  }
+}
+/* line 1194, assets/sass/_elements.scss */
+.coupon-app-wrapper .section-heading {
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 14px;
+}
+
+/* line 1202, assets/sass/_elements.scss */
+.coupon-app p {
+  font-size: 16px;
+  font-weight: 300;
+}
+/* line 1206, assets/sass/_elements.scss */
+.coupon-app h2 {
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-size: 27px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+@media screen and (min-width: 500px) {
+  /* line 1206, assets/sass/_elements.scss */
+  .coupon-app h2 {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 790px) {
+  /* line 1206, assets/sass/_elements.scss */
+  .coupon-app h2 {
+    font-size: 32px;
+  }
+}
+/* line 1219, assets/sass/_elements.scss */
+.coupon-app .column {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+@media screen and (max-width: 790px) {
+  /* line 1224, assets/sass/_elements.scss */
+  .coupon-app .column:last-child img {
+    float: none;
+    max-width: 70%;
+  }
+}
+/* line 1231, assets/sass/_elements.scss */
+.coupon-app .ui.grid {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* line 1236, assets/sass/_elements.scss */
+.app-button {
+  color: #FFFFFF;
+  float: left;
+  margin-right: 15px;
+  background: #81858b;
+  margin-top: 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 1243, assets/sass/_elements.scss */
+.app-button .fleft {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2px 4px 6px 8px;
+}
+/* line 1247, assets/sass/_elements.scss */
+.app-button .fright {
+  padding: 9px 15px 5px;
+}
+/* line 1250, assets/sass/_elements.scss */
+.app-button i {
+  font-size: 38px;
+  line-height: 50px;
+  margin: 0px;
+}
+/* line 1255, assets/sass/_elements.scss */
+.app-button .avail-text {
+  display: block;
+  font-size: 11px;
+  line-height: 1;
+}
+/* line 1260, assets/sass/_elements.scss */
+.app-button .app-service {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+/* line 1267, assets/sass/_elements.scss */
+.app-button:hover {
+  color: #FFFFFF;
+  background: #111111;
+}
+
+/* line 1272, assets/sass/_elements.scss */
+.android-button {
+  background: #82b21c;
+}
+
+/* Load More
+------------------------------*/
+/* line 1290, assets/sass/_elements.scss */
+.load-more {
+  text-align: center;
+}
+/* line 1292, assets/sass/_elements.scss */
+.load-more .ui.btn.btn_large {
+  padding: 15px 30px 16px;
+  letter-spacing: 2px;
+}
+
+/* Advertisement
+------------------------------*/
+/* line 1300, assets/sass/_elements.scss */
+.after-content-ads {
+  display: inline-block;
+  margin: 20px 0px;
+}
+
+/* line 1305, assets/sass/_elements.scss */
+.ads-area .ui.divider {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #888888;
+  margin-top: 0;
+}
+
+/* Categories Index A-Z
+------------------------------*/
+/* line 1317, assets/sass/_elements.scss */
+.cate-az a {
+  color: #666666;
+}
+/* line 1319, assets/sass/_elements.scss */
+.cate-az a:hover {
+  color: #00979d;
+}
+/* line 1323, assets/sass/_elements.scss */
+.cate-az .cate-item {
+  list-style: none;
+}
+/* line 1326, assets/sass/_elements.scss */
+.cate-az .cate-parent > a {
+  font-size: 16px;
+  color: #00979d;
+}
+/* line 1329, assets/sass/_elements.scss */
+.cate-az .cate-parent > a i {
+  color: #666666;
+}
+/* line 1333, assets/sass/_elements.scss */
+.cate-az .cate-child {
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-left: 15px;
+  border-top: 2px solid #f5f5f5;
+}
+
+/* Stores Index A-Z
+------------------------------*/
+/* line 1343, assets/sass/_elements.scss */
+.store-listing {
+  padding-left: 30px;
+}
+
+/* line 1346, assets/sass/_elements.scss */
+.store-listing-box {
+  margin-bottom: 60px;
+}
+
+/* line 1352, assets/sass/_elements.scss */
+.store-letter-content ul li {
+  width: 33%;
+  float: left;
+}
+
+/*------------------------------
+	4.3 Sidebar
+------------------------------*/
+/* line 1363, assets/sass/_elements.scss */
+.widget-area .widget {
+  margin-bottom: 37px;
+}
+/* line 1365, assets/sass/_elements.scss */
+.widget-area .widget .widget-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+}
+/* line 1373, assets/sass/_elements.scss */
+.widget-area .widget-content {
+  padding: 20px;
+}
+/* line 1375, assets/sass/_elements.scss */
+.widget-area .widget-content ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+/* line 1379, assets/sass/_elements.scss */
+.widget-area .widget-content ul li {
+  margin: 0px;
+}
+/* line 1381, assets/sass/_elements.scss */
+.widget-area .widget-content ul li a {
+  padding: 6px 0px;
+  display: inline-block;
+}
+/* line 1385, assets/sass/_elements.scss */
+.widget-area .widget-content ul li:first-child a {
+  padding-top: 0px;
+}
+/* line 1388, assets/sass/_elements.scss */
+.widget-area .widget-content ul li:last-child a {
+  padding-bottom: 0px;
+}
+/* line 1394, assets/sass/_elements.scss */
+.widget-area .widget_categories .widget-content {
+  padding: 10px 20px;
+}
+/* line 1398, assets/sass/_elements.scss */
+.widget-area .widget_categories .widget-content ul li {
+  float: left;
+  width: 50%;
+  display: inline-block;
+}
+/* line 1402, assets/sass/_elements.scss */
+.widget-area .widget_categories .widget-content ul li a {
+  padding: 7px 0px;
+}
+/* line 1405, assets/sass/_elements.scss */
+.widget-area .widget_categories .widget-content ul li:first-child a {
+  padding-top: 7px;
+}
+/* line 1411, assets/sass/_elements.scss */
+.widget-area .ui.icon.input > i.icon {
+  opacity: 0.2;
+}
+
+/*------------------------------
+	4.4 Footer
+------------------------------*/
+/* line 1420, assets/sass/_elements.scss */
+.site-footer {
+  padding: 50px 0px 50px;
+  background: #222222;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12.5px;
+  /* Elements */
+  /* Extract Footer Elements */
+  /* Columns & Settings */
+  /* Widget Area On/Off */
+}
+/* line 1426, assets/sass/_elements.scss */
+.site-footer .widget {
+  margin-bottom: 20px;
+}
+/* line 1428, assets/sass/_elements.scss */
+.site-footer .widget:last-child {
+  margin-bottom: 0px;
+}
+/* line 1434, assets/sass/_elements.scss */
+.site-footer p {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12.5px;
+}
+/* line 1438, assets/sass/_elements.scss */
+.site-footer a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12.5px;
+}
+/* line 1441, assets/sass/_elements.scss */
+.site-footer a:hover {
+  color: #00979d;
+}
+/* line 1445, assets/sass/_elements.scss */
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 1449, assets/sass/_elements.scss */
+.site-footer ul li {
+  margin: 0;
+}
+/* line 1451, assets/sass/_elements.scss */
+.site-footer ul li a {
+  display: block;
+  padding: 5px 0px;
+}
+/* line 1457, assets/sass/_elements.scss */
+.site-footer table > thead > tr > th, .site-footer table > tbody > tr > th, .site-footer table > tfoot > tr > th, .site-footer table > thead > tr > td, .site-footer table > tbody > tr > td, .site-footer table > tfoot > tr > td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+/* line 1460, assets/sass/_elements.scss */
+.site-footer textarea, .site-footer input[type="date"], .site-footer input[type="datetime"], .site-footer input[type="datetime-local"], .site-footer input[type="email"], .site-footer input[type="month"], .site-footer input[type="number"], .site-footer input[type="password"], .site-footer input[type="search"], .site-footer input[type="tel"], .site-footer input[type="text"], .site-footer input[type="time"], .site-footer input[type="url"], .site-footer input[type="week"] {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+/* line 1464, assets/sass/_elements.scss */
+.site-footer .widget_nav_menu ul ul, .site-footer .widget_nav_menu ul ul ul {
+  padding: 0px;
+}
+/* line 1467, assets/sass/_elements.scss */
+.site-footer .widget_nav_menu ul li {
+  padding: 0;
+}
+/* line 1470, assets/sass/_elements.scss */
+.site-footer .widget_nav_menu ul li a {
+  display: block;
+  padding: 5px 10px 9px 17px;
+  position: relative;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+}
+/* line 1475, assets/sass/_elements.scss */
+.site-footer .widget_nav_menu ul li a:before {
+  content: "\f105";
+  font-family: Icons;
+  font-size: 10px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+/* line 1490, assets/sass/_elements.scss */
+.site-footer .app-button {
+  background: rgba(255, 255, 255, 0.05);
+}
+/* line 1491, assets/sass/_elements.scss */
+.site-footer .app-button i {
+  font-size: 25px;
+  line-height: 46px;
+}
+/* line 1495, assets/sass/_elements.scss */
+.site-footer .app-button .fleft {
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4px 8px 11px 10px;
+}
+/* line 1503, assets/sass/_elements.scss */
+.site-footer .app-button .android-button {
+  background: rgba(255, 255, 255, 0.03);
+}
+/* line 1508, assets/sass/_elements.scss */
+.site-footer .newsletter-box-wrapper .newsletter-text {
+  font-size: 13px;
+  margin-top: 8px;
+}
+/* line 1512, assets/sass/_elements.scss */
+.site-footer .newsletter-box-wrapper input {
+  border-radius: 2px;
+}
+/* line 1515, assets/sass/_elements.scss */
+.site-footer .newsletter-box-wrapper .input .ui.button {
+  background: #00979d;
+  color: #FFFFFF;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+/* line 1526, assets/sass/_elements.scss */
+.site-footer .footer-social a {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+/* line 1530, assets/sass/_elements.scss */
+.site-footer .footer-social a:hover {
+  background: #00979d;
+  color: #FFFFFF;
+}
+/* line 1539, assets/sass/_elements.scss */
+.site-footer .footer-columns .footer-column .widget {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  border: none;
+}
+/* line 1544, assets/sass/_elements.scss */
+.site-footer .footer-columns .footer-column .widget .widget-title {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+/* line 1553, assets/sass/_elements.scss */
+.site-footer .footer-1-columns .footer-column {
+  width: 100%;
+}
+/* line 1558, assets/sass/_elements.scss */
+.site-footer .footer-2-columns .footer-column {
+  width: 100%;
+}
+@media screen and (min-width: 790px) {
+  /* line 1562, assets/sass/_elements.scss */
+  .site-footer .footer-2-columns .footer-column {
+    width: 47.78761%;
+    float: left;
+    margin-right: 4.42478%;
+  }
+  /* line 1567, assets/sass/_elements.scss */
+  .site-footer .footer-2-columns .footer-2 {
+    margin-right: 0;
+  }
+}
+/* line 1574, assets/sass/_elements.scss */
+.site-footer .footer-3-columns .footer-column {
+  width: 100%;
+}
+@media screen and (min-width: 790px) {
+  /* line 1578, assets/sass/_elements.scss */
+  .site-footer .footer-3-columns .footer-column {
+    width: 47.78761%;
+    float: left;
+    margin-right: 4.42478%;
+  }
+  /* line 1583, assets/sass/_elements.scss */
+  .site-footer .footer-3-columns .footer-2 {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  /* line 1588, assets/sass/_elements.scss */
+  .site-footer .footer-3-columns .footer-column {
+    width: 30.38348%;
+    float: left;
+    margin-right: 4.42478%;
+  }
+  /* line 1593, assets/sass/_elements.scss */
+  .site-footer .footer-3-columns .footer-3 {
+    margin-right: 0;
+  }
+}
+/* line 1600, assets/sass/_elements.scss */
+.site-footer .footer-4-columns .footer-column {
+  width: 100%;
+}
+@media screen and (min-width: 790px) {
+  /* line 1604, assets/sass/_elements.scss */
+  .site-footer .footer-4-columns .footer-column {
+    width: 47.78761%;
+    float: left;
+    margin-right: 4.42478%;
+  }
+  /* line 1609, assets/sass/_elements.scss */
+  .site-footer .footer-4-columns .footer-2, .site-footer .footer-4-columns .footer-4 {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  /* line 1614, assets/sass/_elements.scss */
+  .site-footer .footer-4-columns .footer-column {
+    width: 21.68142%;
+    float: left;
+    margin-right: 4.42478%;
+  }
+  /* line 1619, assets/sass/_elements.scss */
+  .site-footer .footer-4-columns .footer-4 {
+    margin-right: 0;
+  }
+}
+/* line 1625, assets/sass/_elements.scss */
+.site-footer .footer_copy {
+  padding-top: 50px;
+  margin-top: 50px;
+  border-top: 2px solid rgba(255, 255, 255, 0.03);
+}
+/* line 1629, assets/sass/_elements.scss */
+.site-footer .footer_copy p {
+  margin-bottom: 5px;
+}
+/* line 1634, assets/sass/_elements.scss */
+.site-footer .footer_copy ul li a {
+  display: inline-block;
+  float: left;
+  margin-right: 25px;
+}
+/* line 1644, assets/sass/_elements.scss */
+.site-footer .footer-widgets-off .footer_copy {
+  padding-top: 0px;
+  margin-top: 0px;
+  border-top: none;
+}
+/* line 1650, assets/sass/_elements.scss */
+.site-footer .widget_heading {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/*------------------------------
+	4.5 User Page
+------------------------------*/
+/* line 1665, assets/sass/_elements.scss */
+.st-profile-meta .st-user-socials a {
+  width: auto;
+  height: auto;
+}
+
+/* line 1673, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-header, .stuser-form-profile .st-profile-cover {
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 1682, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-header .st-profile-meta {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(220, 220, 220, 0.08);
+  border-left: 1px solid rgba(220, 220, 220, 0.08);
+  border-right: 1px solid rgba(220, 220, 220, 0.08);
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+/* line 1690, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-header .st-user-socials {
+  margin-top: 15px;
+}
+/* line 1694, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-header .st-profile-meta-info .st-display-name {
+  line-height: 23px;
+  font-size: 23px;
+}
+/* line 1698, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-header .st-profile-meta-info .dashicons::before {
+  vertical-align: middle;
+}
+/* line 1702, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-header .st-profile-meta-info .list-meta-info i {
+  margin-top: 3px;
+}
+/* line 1705, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-header .st-profile-meta-info .list-meta-info span {
+  margin-right: 15px;
+}
+/* line 1715, assets/sass/_elements.scss */
+.stuser-form-profile .section-heading .button {
+  float: right;
+  margin-top: 8px;
+}
+/* line 1721, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-sidebar {
+  background-color: transparent;
+  color: #888888;
+}
+/* line 1725, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-sidebar li a {
+  background-color: transparent;
+  color: #666666;
+}
+/* line 1729, assets/sass/_elements.scss */
+.stuser-form-profile .stuser-form-sidebar li.active a, .stuser-form-profile .stuser-form-sidebar li:hover a {
+  background-color: #f0f0f0;
+}
+
+/*--------------------------------------------------------------
+5.0 Posts
+--------------------------------------------------------------*/
+/* Entry Content
+------------------------------*/
+/* line 4, assets/sass/_posts.scss */
+.entry-content cite {
+  display: block;
+  margin-top: 10px;
+}
+/* line 7, assets/sass/_posts.scss */
+.entry-content cite:before {
+  content: "- ";
+}
+/* line 11, assets/sass/_posts.scss */
+.entry-content table > thead > tr > th, .entry-content table > tbody > tr > th, .entry-content table > tfoot > tr > th, .entry-content table > thead > tr > td, .entry-content table > tbody > tr > td, .entry-content table > tfoot > tr > td {
+  padding: 15.38462px;
+}
+/* line 15, assets/sass/_posts.scss */
+.entry-content blockquote {
+  padding: 20px 80px 20px 28px;
+  position: relative;
+  background: #f8f9f9;
+  border-left: 3px solid #00979d;
+  font-style: italic;
+}
+/* line 21, assets/sass/_posts.scss */
+.entry-content blockquote p {
+  margin: 0px;
+}
+/* line 26, assets/sass/_posts.scss */
+.entry-content h3, .entry-content h4, .entry-content h5 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* WordPress caption style
+------------------------------*/
+/* line 34, assets/sass/_posts.scss */
+.wp-caption {
+  max-width: 100%;
+  font-style: italic;
+  line-height: 1.35;
+  margin-bottom: 30px;
+}
+/* line 39, assets/sass/_posts.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  max-width: 98%;
+}
+/* line 43, assets/sass/_posts.scss */
+.wp-caption .wp-caption-text {
+  margin: 10px 0;
+}
+
+/* line 50, assets/sass/_posts.scss */
+.wp-caption-text,
+.entry-thumbnail-caption,
+.cycle-caption {
+  font-style: italic;
+  line-height: 1.35;
+  font-size: 13px;
+}
+
+/* line 57, assets/sass/_posts.scss */
+.alignleft,
+.entry-thumbnail.thumbnail {
+  display: inline;
+  float: left;
+  margin-right: 50px;
+}
+
+/* line 63, assets/sass/_posts.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 50px;
+}
+
+/* line 69, assets/sass/_posts.scss */
+.aligncenter {
+  display: block;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 76, assets/sass/_posts.scss */
+img.wp-smiley {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+  border: none;
+}
+
+/* line 83, assets/sass/_posts.scss */
+.gallery-caption {
+  font-family: inherit;
+}
+
+/* line 87, assets/sass/_posts.scss */
+.bypostauthor {
+  margin: 0;
+}
+
+/**
+* 14.2 Galleries
+*/
+/* line 95, assets/sass/_posts.scss */
+.gallery {
+  margin-bottom: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/* line 99, assets/sass/_posts.scss */
+.gallery .gallery-item {
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+/* line 105, assets/sass/_posts.scss */
+.gallery .gallery-item img {
+  width: 100%;
+}
+
+/* line 111, assets/sass/_posts.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+/* line 115, assets/sass/_posts.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+/* line 119, assets/sass/_posts.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+/* line 123, assets/sass/_posts.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+/* line 127, assets/sass/_posts.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+/* line 131, assets/sass/_posts.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+/* line 135, assets/sass/_posts.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+/* line 139, assets/sass/_posts.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+/* line 143, assets/sass/_posts.scss */
+.gallery-icon img {
+  margin: 0 auto;
+}
+
+/* line 147, assets/sass/_posts.scss */
+.gallery-caption {
+  color: #707070;
+  display: block;
+  padding-top: 5px;
+}
+
+/* line 156, assets/sass/_posts.scss */
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+  display: none;
+}
+
+/* Post
+------------------------------*/
+/* line 165, assets/sass/_posts.scss */
+.post-entry .post-thumbnail {
+  margin-bottom: 25px;
+}
+/* line 166, assets/sass/_posts.scss */
+.post-entry .post-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+/* line 172, assets/sass/_posts.scss */
+.post-entry .post-meta {
+  position: relative;
+  margin-bottom: 25px;
+}
+/* line 175, assets/sass/_posts.scss */
+.post-entry .post-meta:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+/* line 180, assets/sass/_posts.scss */
+.post-entry .post-meta h2 {
+  clear: none;
+  font-size: 23px;
+  margin-bottom: 0px;
+  margin-top: -8px;
+  display: inline-block;
+}
+/* line 187, assets/sass/_posts.scss */
+.post-entry .post-meta .author-avatar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/* line 191, assets/sass/_posts.scss */
+.post-entry .post-meta .author-avatar img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 195, assets/sass/_posts.scss */
+.post-entry .post-meta .author-avatar + .post-meta-data {
+  margin-left: 65px;
+  margin-top: 0px;
+}
+/* line 199, assets/sass/_posts.scss */
+.post-entry .post-meta .meta-line-2 {
+  margin-bottom: 0px;
+}
+/* line 202, assets/sass/_posts.scss */
+.post-entry .post-meta .meta-line-2 span:after {
+  content: "-";
+  margin-right: 8px;
+  margin-left: 8px;
+}
+/* line 207, assets/sass/_posts.scss */
+.post-entry .post-meta .meta-line-2 span:last-child:after {
+  content: "";
+  margin-right: 0px;
+  margin-left: 0px;
+}
+/* line 218, assets/sass/_posts.scss */
+.post-entry .post-content iframe, .post-entry .post-content embed {
+  max-width: 100%;
+}
+
+/* line 225, assets/sass/_posts.scss */
+.post-entry.shadow-box.sticky {
+  background-color: #fffaf3;
+}
+
+/* Comments
+------------------------------*/
+/* line 232, assets/sass/_posts.scss */
+#comments .ui.comments {
+  max-width: 100%;
+}
+/* line 236, assets/sass/_posts.scss */
+#comments .comment .comment {
+  margin-left: 50px;
+}
+/* line 240, assets/sass/_posts.scss */
+#comments .content.shadow-box {
+  padding: 15px;
+}
+
+/* line 246, assets/sass/_posts.scss */
+.comment-form .input {
+  position: relative;
+  margin-bottom: 15px;
+}
+/* line 249, assets/sass/_posts.scss */
+.comment-form .input span.required {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+  color: #dd4c0c;
+  line-height: 0px;
+}
+/* line 258, assets/sass/_posts.scss */
+.comment-form .comment-form-comment textarea {
+  background: #ffffff;
+}
+
+/* line 263, assets/sass/_posts.scss */
+.comment-respond {
+  margin-bottom: 10px;
+}
+
+/* line 267, assets/sass/_posts.scss */
+.comments .comment-respond {
+  margin-top: 15px;
+}
+
+/* line 273, assets/sass/_posts.scss */
+.right-sidebar .comment-respond textarea,
+.left-sidebar .comment-respond textarea {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+6.0 Pages
+--------------------------------------------------------------*/
+/* line 1, assets/sass/_pages.scss */
+.custom-page-header {
+  margin-top: 25px;
+}
+/* line 3, assets/sass/_pages.scss */
+.custom-page-header .inner {
+  background: #ffffff;
+  padding: 0px 15px 15px;
+}
+@media screen and (min-width: 790px) {
+  /* line 3, assets/sass/_pages.scss */
+  .custom-page-header .inner {
+    padding: 0px 30px 30px;
+  }
+}
+/* line 10, assets/sass/_pages.scss */
+.custom-page-header .inner-content {
+  padding-top: 20px;
+}
+/* line 13, assets/sass/_pages.scss */
+.custom-page-header h1 {
+  font-weight: 300;
+  margin-bottom: 7px;
+  margin-top: 3px;
+  line-height: 1.6;
+  letter-spacing: -1px;
+}
+/* line 19, assets/sass/_pages.scss */
+.custom-page-header h1 strong {
+  font-weight: 900;
+}
+/* line 23, assets/sass/_pages.scss */
+.custom-page-header .breadcrumb {
+  display: block;
+  margin-bottom: 0;
+  padding: 0px 0 10px;
+}
+/* line 27, assets/sass/_pages.scss */
+.custom-page-header .breadcrumb i.divider {
+  color: #000000;
+}
+/* line 30, assets/sass/_pages.scss */
+.custom-page-header .breadcrumb .active {
+  color: #999999;
+}
+/* line 34, assets/sass/_pages.scss */
+.custom-page-header .header-thumb {
+  float: none;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 790px) {
+  /* line 34, assets/sass/_pages.scss */
+  .custom-page-header .header-thumb {
+    float: left;
+    display: block;
+    margin-right: 30px;
+    padding-top: 15px;
+  }
+}
+/* line 45, assets/sass/_pages.scss */
+.custom-page-header .header-thumb .ui.center i {
+  font-size: 50px;
+}
+/* line 48, assets/sass/_pages.scss */
+.custom-page-header .header-thumb img {
+  max-width: 120px;
+}
+/* line 52, assets/sass/_pages.scss */
+.custom-page-header .header-content {
+  overflow: hidden;
+}
+/* line 54, assets/sass/_pages.scss */
+.custom-page-header .header-content .entry-share {
+  margin-top: 5px;
+  display: inline-block;
+}
+/* line 59, assets/sass/_pages.scss */
+.custom-page-header .header-content, .custom-page-header .header-content p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* line 65, assets/sass/_pages.scss */
+.page-header {
+  padding: 30px 0px 0px;
+}
+/* line 67, assets/sass/_pages.scss */
+.page-header h1 {
+  margin-bottom: 0px;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+/* line 72, assets/sass/_pages.scss */
+.page-header .ui.breadcrumb {
+  margin-top: 0px;
+}
+
+/* line 77, assets/sass/_pages.scss */
+.page-header-cover {
+  text-align: center;
+  padding: 80px 0px 80px;
+  margin-bottom: 20px;
+  background: url("assets/images/header-cover.jpg") bottom center;
+  background-size: cover;
+  position: relative;
+}
+/* line 84, assets/sass/_pages.scss */
+.page-header-cover:after {
+  background: linear-gradient(to bottom, transparent 0px, transparent 0px, rgba(0, 0, 0, 0.65) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+/* line 95, assets/sass/_pages.scss */
+.page-header-cover h1 {
+  margin-bottom: 0px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 20;
+  font-size: 35px;
+}
+@media screen and (min-width: 790px) {
+  /* line 95, assets/sass/_pages.scss */
+  .page-header-cover h1 {
+    font-size: 42px;
+  }
+}
+/* line 107, assets/sass/_pages.scss */
+.page-header-cover .ui.breadcrumb {
+  margin-top: 0px;
+  position: relative;
+  z-index: 10;
+}
+/* line 111, assets/sass/_pages.scss */
+.page-header-cover .ui.breadcrumb .section {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+/* line 115, assets/sass/_pages.scss */
+.page-header-cover .ui.breadcrumb i {
+  color: #FFFFFF;
+  opacity: 1;
+}
+/* line 119, assets/sass/_pages.scss */
+.page-header-cover .ui.breadcrumb a:hover {
+  text-decoration: underline;
+}
+/* line 122, assets/sass/_pages.scss */
+.page-header-cover .ui.breadcrumb .active.section {
+  font-weight: 300;
+}
+
+/* line 129, assets/sass/_pages.scss */
+.ui.breadcrumb .section {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+}
+/* line 134, assets/sass/_pages.scss */
+.ui.breadcrumb a {
+  color: #00979d;
+}
+/* line 136, assets/sass/_pages.scss */
+.ui.breadcrumb a:hover {
+  color: #ff9900;
+}
+
+/* line 142, assets/sass/_pages.scss */
+.heading-line {
+  background: none repeat scroll 0 0 #fab702;
+  display: block;
+  height: 2px;
+  width: 80px;
+}
+
+/* line 149, assets/sass/_pages.scss */
+.site-breadcrumb {
+  padding: 8px 0px 0px;
+  margin-bottom: -10px;
+  color: #999999;
+}
+/* line 153, assets/sass/_pages.scss */
+.site-breadcrumb .ui.breadcrumb a.section {
+  color: #00979d;
+}
+/* line 156, assets/sass/_pages.scss */
+.site-breadcrumb .ui.breadcrumb .icon.divider {
+  opacity: 1;
+}
+
+/* line 163, assets/sass/_pages.scss */
+.single-store-header .header-thumb {
+  text-align: left;
+}
+/* line 165, assets/sass/_pages.scss */
+.single-store-header .header-thumb .header-store-thumb a {
+  line-height: 114px;
+  border: 2px solid #f5f5f5;
+  text-align: center;
+  margin-bottom: 10px;
+  min-width: 200px;
+  display: block;
+}
+/* line 172, assets/sass/_pages.scss */
+.single-store-header .header-thumb .header-store-thumb a:hover {
+  border-color: #ff9900;
+}
+/* line 176, assets/sass/_pages.scss */
+.single-store-header .header-thumb img {
+  max-width: 200px;
+}
+/* line 180, assets/sass/_pages.scss */
+.single-store-header .add-favorite {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+/* line 184, assets/sass/_pages.scss */
+.single-store-header .add-favorite:hover {
+  color: #00979d;
+}
+
+/* line 189, assets/sass/_pages.scss */
+.coupon-filter {
+  margin-bottom: 20px;
+}
+/* line 191, assets/sass/_pages.scss */
+.coupon-filter .ui.menu {
+  border-radius: 0px;
+  box-shadow: 0 0 0 1px rgba(39, 41, 43, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: none;
+}
+/* line 195, assets/sass/_pages.scss */
+.coupon-filter .ui.menu .item {
+  padding: 15px 18px;
+}
+/* line 197, assets/sass/_pages.scss */
+.coupon-filter .ui.menu .item .offer-count {
+  display: none;
+  font-size: 11px;
+  background: #00979d;
+  padding: 2px 6px 2px;
+  margin-left: 6px;
+  color: #FFFFFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+@media screen and (min-width: 500px) {
+  /* line 197, assets/sass/_pages.scss */
+  .coupon-filter .ui.menu .item .offer-count {
+    display: inline-block;
+  }
+}
+/* line 209, assets/sass/_pages.scss */
+.coupon-filter .ui.menu .item .code-count {
+  background: #b9dc2f;
+}
+/* line 210, assets/sass/_pages.scss */
+.coupon-filter .ui.menu .item .sale-count {
+  background: #ea4c89;
+}
+/* line 211, assets/sass/_pages.scss */
+.coupon-filter .ui.menu .item .print-count {
+  background: #2d3538;
+}
+/* line 214, assets/sass/_pages.scss */
+.coupon-filter .ui.pointing.menu .active.item:after {
+  background: #FFF;
+}
+/* line 217, assets/sass/_pages.scss */
+.coupon-filter .ui.menu .active.item {
+  box-shadow: none;
+  background: #FFF;
+}
+/* line 221, assets/sass/_pages.scss */
+.coupon-filter .ui.menu > .item:first-child {
+  border-radius: 0px;
+}
+/* line 224, assets/sass/_pages.scss */
+.coupon-filter .ui.menu .item:before {
+  background: linear-gradient(rgba(0, 0, 0, 0.04) 0px, rgba(0, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0.04) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+/*--------------------------------------------------------------
+7.0 Widgets
+--------------------------------------------------------------*/
+/* Newsletters
+------------------------------*/
+/* line 3, assets/sass/_widgets.scss */
+.newsletter-box-wrapper.shadow-box {
+  padding: 20px;
+}
+/* line 5, assets/sass/_widgets.scss */
+.newsletter-box-wrapper.shadow-box .newsletter-text {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+}
+/* line 10, assets/sass/_widgets.scss */
+.newsletter-box-wrapper.shadow-box input {
+  border-color: #eeeeee;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 14, assets/sass/_widgets.scss */
+.newsletter-box-wrapper.shadow-box .input .ui.button {
+  background: #00979d;
+  color: #FFFFFF;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 22, assets/sass/_widgets.scss */
+.newsletter-box-wrapper.shadow-box .sidebar-social {
+  display: inline-block;
+  margin-top: 15px;
+}
+/* line 25, assets/sass/_widgets.scss */
+.newsletter-box-wrapper.shadow-box .sidebar-social a {
+  margin-bottom: 5px;
+}
+/* line 27, assets/sass/_widgets.scss */
+.newsletter-box-wrapper.shadow-box .sidebar-social a i {
+  color: #FFFFFF;
+}
+/* line 30, assets/sass/_widgets.scss */
+.newsletter-box-wrapper.shadow-box .sidebar-social a:hover {
+  background: #00979d;
+}
+
+/* Popular Stores
+------------------------------*/
+/* line 40, assets/sass/_widgets.scss */
+.widget_popular_stores .ui.grid {
+  margin: -10px;
+}
+/* line 43, assets/sass/_widgets.scss */
+.widget_popular_stores .ui.grid > .column:not(.row) {
+  padding: 10px;
+}
+/* line 46, assets/sass/_widgets.scss */
+.widget_popular_stores .store-thumb {
+  line-height: 68px;
+}
+
+/* WP Widget: Calendar
+------------------------------*/
+/* line 54, assets/sass/_widgets.scss */
+.widget_calendar .widget-title {
+  display: none;
+}
+/* line 57, assets/sass/_widgets.scss */
+.widget_calendar #wp-calendar caption {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  margin-top: -4px;
+}
+
+/* line 66, assets/sass/_widgets.scss */
+.site-footer #wp-calendar caption {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+8.0 User Area.
+--------------------------------------------------------------*/
+/* User Header Cover
+------------------------------*/
+/* line 3, assets/sass/_user_dashboard.scss */
+.user-header-cover {
+  height: 300px;
+  width: 100%;
+  background: url("assets/images/user-cover.jpg") bottom center;
+  background-size: cover;
+  position: relative;
+  z-index: 6;
+}
+
+/* line 11, assets/sass/_user_dashboard.scss */
+.stuser-form-header .st-profile-cover {
+  background-image: url("assets/images/user-cover.jpg");
+  background-position: bottom center;
+  background-size: cover;
+}
+
+/* line 17, assets/sass/_user_dashboard.scss */
+.stuser-form-header .st-profile-avatar {
+  background-image: url("assets/images/user-avatar.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 24, assets/sass/_user_dashboard.scss */
+.st-profile-meta {
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+/* line 30, assets/sass/_user_dashboard.scss */
+.fav-stores-box {
+  padding: 20px;
+}
+/* line 32, assets/sass/_user_dashboard.scss */
+.fav-stores-box .image {
+  min-height: 94px;
+  width: 100%;
+}
+/* line 36, assets/sass/_user_dashboard.scss */
+.fav-stores-box .store-thumb {
+  margin-bottom: 5px;
+}
+/* line 40, assets/sass/_user_dashboard.scss */
+.fav-stores-box a span {
+  color: #666666;
+}
+
+/* line 46, assets/sass/_user_dashboard.scss */
+.stuser-form-profile .section-heading .button {
+  background: #00979d;
+  color: #ffffff;
+}
+
+/* line 51, assets/sass/_user_dashboard.scss */
+.nothing-box {
+  width: 100%;
+}
+/* line 53, assets/sass/_user_dashboard.scss */
+.nothing-box:after {
+  clear: both;
+  display: block;
+  content: " ";
+}
+/* line 56, assets/sass/_user_dashboard.scss */
+.nothing-box .thumb {
+  border: 2px solid #f5f5f5;
+  width: 40%;
+  float: left;
+  margin-right: 15px;
+  text-align: center;
+  color: #2394CE;
+  padding: 10px 0px;
+}
+/* line 64, assets/sass/_user_dashboard.scss */
+.nothing-box .thumb i {
+  font-size: 40px;
+  line-height: 40px;
+}
+/* line 67, assets/sass/_user_dashboard.scss */
+.nothing-box .thumb i:before {
+  vertical-align: middle;
+}
+
+/*
+SOCIAL LOGIN & REGISTER
+--------------------------------------------
+*/
+/* line 78, assets/sass/_user_dashboard.scss */
+.st_social_login a.st_form_icon {
+  border: 1px solid rgba(39, 41, 43, 0.15);
+  display: block;
+  width: 100%;
+  padding: 9px 25px 10px 40px;
+  font-weight: bold;
+  color: #666666;
+  position: relative;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 7px;
+}
+/* line 89, assets/sass/_user_dashboard.scss */
+.st_social_login a.st_form_icon i {
+  position: absolute;
+  top: 12px;
+  left: 13px;
+  font-size: 23px;
+}
+
+/* line 96, assets/sass/_user_dashboard.scss */
+.st_social_login a.st_form_icon.st_form_facebook {
+  background: #3b5998;
+  color: #FFFFFF;
+  border-color: #263a63;
+}
+/* line 100, assets/sass/_user_dashboard.scss */
+.st_social_login a.st_form_icon.st_form_facebook:hover {
+  opacity: 0.9;
+}
+
+/* line 105, assets/sass/_user_dashboard.scss */
+.st_social_login a.st_form_icon.st_form_twitter {
+  background: #55acee;
+  color: #FFFFFF;
+  border-color: #388FD1;
+}
+/* line 109, assets/sass/_user_dashboard.scss */
+.st_social_login a.st_form_icon.st_form_twitter:hover {
+  opacity: 0.9;
+}
+
+/* line 115, assets/sass/_user_dashboard.scss */
+.st_social_login a.st_form_icon.st_form_gplus i {
+  color: #dd4b39;
+}
+/* line 118, assets/sass/_user_dashboard.scss */
+.st_social_login a.st_form_icon.st_form_gplus:hover {
+  border-color: rgba(39, 41, 43, 0.3);
+}
+
+/* line 123, assets/sass/_user_dashboard.scss */
+.st_user_sep {
+  position: relative;
+  height: 35px;
+  text-align: center;
+}
+/* line 127, assets/sass/_user_dashboard.scss */
+.st_user_sep .st_form_sep {
+  padding: 7px 10px;
+  display: inline-block;
+  background: #FFFFFF;
+}
+/* line 132, assets/sass/_user_dashboard.scss */
+.st_user_sep hr {
+  margin: -16px auto 10px;
+}
+
+/*--------------------------------------------------------------
+9.0 Support
+--------------------------------------------------------------*/
+/* Elements 
+------------------------------*/
+/* line 3, assets/sass/_support.scss */
+.shadow-box {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  background: #FFFFFF;
+}
+
+/* line 12, assets/sass/_support.scss */
+.wpb_content_element {
+  margin-bottom: 40px;
+}
+
+/* line 16, assets/sass/_support.scss */
+.list-categories-wrapper.wpb_content_element {
+  margin-bottom: 15px;
+}
+
+/* line 20, assets/sass/_support.scss */
+.section-heading {
+  font-size: 23px;
+  letter-spacing: -0.3px;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+
+/* line 27, assets/sass/_support.scss */
+.ui.modal {
+  background: #f5f5f5;
+  border-radius: 0;
+}
+@media screen and (min-width: 1100px) {
+  /* line 27, assets/sass/_support.scss */
+  .ui.modal {
+    margin: 0 0 0 -21%;
+    width: 50%;
+  }
+}
+
+/* Button 
+------------------------------*/
+/* line 38, assets/sass/_support.scss */
+.ui.button.btn_primary {
+  background: #00979d;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+  margin-right: 0px;
+  letter-spacing: 1px;
+}
+/* line 44, assets/sass/_support.scss */
+.ui.button.btn_primary:hover {
+  opacity: 0.8;
+}
+
+/* line 48, assets/sass/_support.scss */
+.ui.button.btn_secondary {
+  background: #ff9900;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+  margin-right: 0px;
+  letter-spacing: 1px;
+}
+/* line 54, assets/sass/_support.scss */
+.ui.button.btn_secondary:hover {
+  opacity: 0.8;
+}
+
+/* Coupon Button 
+------------------------------*/
+/* Coupon Code */
+/* line 63, assets/sass/_support.scss */
+.coupon-button-type .coupon-deal, .coupon-button-type .coupon-print, .coupon-button-type .coupon-code {
+  line-height: 1;
+  padding: 14px 38px;
+  background: #ff9900;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  min-width: 195px;
+  text-align: center;
+}
+/* line 77, assets/sass/_support.scss */
+.coupon-button-type .coupon-deal:hover, .coupon-button-type .coupon-print:hover, .coupon-button-type .coupon-code:hover {
+  opacity: 0.9;
+}
+/* line 81, assets/sass/_support.scss */
+.coupon-button-type .coupon-deal {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+}
+/* line 84, assets/sass/_support.scss */
+.coupon-button-type .coupon-print {
+  padding: 14px 13px;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+}
+/* line 88, assets/sass/_support.scss */
+.coupon-button-type .coupon-code {
+  color: #444444;
+  background: linear-gradient(315deg, rgba(0, 0, 0, 0.06) 10%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.06) 40%, rgba(0, 0, 0, 0.06) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.06) 90%) repeat scroll 0 0/6px 6px rgba(0, 0, 0, 0);
+  text-align: right;
+  padding: 10px 12px;
+  font-size: 20px;
+  border: 2px solid #DDDDDD;
+  position: relative;
+}
+/* line 96, assets/sass/_support.scss */
+.coupon-button-type .coupon-code .code-text {
+  text-transform: uppercase;
+}
+/* line 99, assets/sass/_support.scss */
+.coupon-button-type .coupon-code .get-code {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: #ff9900;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 14px 15px 14px 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  transition: all 0.5s ease;
+}
+/* line 110, assets/sass/_support.scss */
+.coupon-button-type .coupon-code .get-code:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 44px solid transparent;
+  border-left: 44px solid #ff9900;
+  position: absolute;
+  right: -44px;
+  top: 0;
+}
+/* line 122, assets/sass/_support.scss */
+.coupon-button-type .coupon-code .get-code:hover {
+  padding-right: 5px;
+  transition: all 0.5s ease;
+}
+
+/* Owl Carsouel 
+------------------------------*/
+/* line 132, assets/sass/_support.scss */
+.home-slider-wrapper {
+  background: #FFFFFF;
+  font-size: 14px;
+  padding: 10px;
+}
+@media screen and (min-width: 790px) {
+  /* line 132, assets/sass/_support.scss */
+  .home-slider-wrapper {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  /* line 139, assets/sass/_support.scss */
+  .home-slider-wrapper .owl-controls .owl-next, .home-slider-wrapper .owl-controls .owl-prev {
+    display: none;
+  }
+}
+
+/* line 146, assets/sass/_support.scss */
+.slideshow_item img {
+  cursor: grab;
+}
+
+/* line 149, assets/sass/_support.scss */
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 157, assets/sass/_support.scss */
+.owl-carousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y;
+}
+
+/* line 163, assets/sass/_support.scss */
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+/* line 168, assets/sass/_support.scss */
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* line 173, assets/sass/_support.scss */
+.owl-carousel .owl-wrapper-outer.autoHeight {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/* line 180, assets/sass/_support.scss */
+.owl-carousel .owl-item {
+  float: left;
+}
+
+/* line 184, assets/sass/_support.scss */
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer;
+}
+
+/* line 187, assets/sass/_support.scss */
+.owl-controls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* fix */
+/* line 197, assets/sass/_support.scss */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+/* line 205, assets/sass/_support.scss */
+.slideshow_item img {
+  display: block;
+}
+
+/* line 208, assets/sass/_support.scss */
+.owl-controls .owl-prev {
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  opacity: 0.2;
+}
+
+/* line 216, assets/sass/_support.scss */
+.owl-controls .owl-next {
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  opacity: 0.2;
+}
+
+/* line 224, assets/sass/_support.scss */
+.owl-controls .owl-next:hover, .owl-controls .owl-prev:hover {
+  opacity: 1;
+}
+
+/* Social Likes
+------------------------------*/
+/* line 230, assets/sass/_support.scss */
+.social-likes, .social-likes__widget {
+  display: inline-block;
+  padding: 0;
+  vertical-align: middle!important;
+  word-spacing: 0!important;
+  text-indent: 0!important;
+  list-style: none!important;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes {
+  opacity: 0;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_visible {
+  opacity: 1;
+  -webkit-transition: opacity .1s ease-in;
+  transition: opacity .1s ease-in;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes > * {
+  display: inline-block;
+  visibility: hidden;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_vertical > * {
+  display: block;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_visible > * {
+  visibility: inherit;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget:before, .social-likes__widget:after {
+  display: none!important;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_vertical .social-likes__widget {
+  display: block;
+  float: left;
+  clear: left;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__button, .social-likes__icon, .social-likes__counter {
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__button, .social-likes__counter {
+  display: inline-block;
+  margin: 0;
+  outline: 0;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__button {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__button:before {
+  content: "";
+  display: inline-block;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__counter {
+  display: none;
+  position: relative;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_ready .social-likes__counter, .social-likes__counter_single {
+  display: inline-block;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_ready .social-likes__counter_empty {
+  display: none;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_vertical .social-likes__widget {
+  display: block;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_notext .social-likes__button {
+  padding-left: 0;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single-w {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single {
+  position: absolute;
+  text-align: left;
+  z-index: 99999;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0 .11s,opacity .1s ease-in;
+  transition: visibility 0s .11s,opacity .1s ease-in;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single.social-likes_opened {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity .15s ease-out;
+  transition: opacity .15s ease-out;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__button_single {
+  position: relative;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes {
+  min-height: 36px;
+  margin: -6px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes, .social-likes_single-w {
+  line-height: 19px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget {
+  margin: 6px;
+  color: #000;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  line-height: 19px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget:hover, .social-likes__widget:active, .social-likes__widget:focus {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__button, .social-likes__counter {
+  vertical-align: middle;
+  font-size: 13px;
+  line-height: 20px;
+  cursor: inherit;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__button {
+  padding: 1px 6px 1px 20px;
+  font-weight: 400;
+  border-right: 0;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon {
+  width: 20px;
+  height: 18px;
+  margin-top: 1px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__counter {
+  min-width: 12px;
+  padding: 1px 4px;
+  font-weight: 400;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget:hover > .social-likes__counter, .social-likes__widget:focus > .social-likes__counter, .social-likes__widget:active > .social-likes__counter, .social-likes__widget_active > .social-likes__counter {
+  position: relative;
+  border-left-color: transparent;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget:hover > .social-likes__counter:before, .social-likes__widget:focus > .social-likes__counter:before, .social-likes__widget:active > .social-likes__counter:before, .social-likes__widget_active > .social-likes__counter:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  border-left: 1px solid;
+  opacity: .4;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_vertical {
+  margin: -6px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_vertical .social-likes__widget {
+  margin: 6px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_notext {
+  margin: -3px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_notext .social-likes__widget {
+  margin: 3px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_notext .social-likes__button {
+  width: 18px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_notext .social-likes__icon {
+  width: 100%;
+  background-position: center center;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_single {
+  margin: 0;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single {
+  margin: -12px 0 0;
+  padding: 4px 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__single-container {
+  width: 100%;
+  display: table;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single .social-likes__widget {
+  float: none;
+  display: table-row;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: 0 0;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single .social-likes__button {
+  display: block;
+  padding: 2px 6px 2px 24px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single .social-likes__icon {
+  margin-left: 4px;
+  margin-top: 2px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single .social-likes__counter {
+  display: table-cell;
+  padding: 2px 8px 2px 4px;
+  border-left: 0;
+  text-align: right;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes_single .social-likes__widget:hover > .social-likes__counter:before, .social-likes_single .social-likes__widget:focus > .social-likes__counter:before, .social-likes_single .social-likes__widget:active > .social-likes__counter:before {
+  display: none;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon_single {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAANCAYAAAB7AEQGAAAAaElEQVR42mIxL/zLgATkgXgBECcC8QOYIBOagvVA7ADEa4FYAV0RIxDPAeIUKD8VygeJM7BABf8DsScQ/4HyzwGxB1QcrKgByUpk9h8YnwlJElkBiiYmBiIAbRUx0s46FizhgwEAAgwAkmYQfIjC7tcAAAAASUVORK5CYII=");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_single:hover, .social-likes__widget_single:active, .social-likes__widget_single:focus, .social-likes__widget_active {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #3673f4;
+  border-color: #3673f4;
+  color: #fff;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_single:hover .social-likes__icon_single, .social-likes__widget_single:active .social-likes__icon_single, .social-likes__widget_single:focus .social-likes__icon_single, .social-likes__widget_active .social-likes__icon_single {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAANCAYAAAB7AEQGAAAAYklEQVR42mL4//8/AxKWB+L9QKyALI6u4Nx/CDiLrBCmgBGIdwOxEVQRiN4DFWcAE1DAAsR/gBgkwIjEBzMaGBAAmf0Hzgea1IDm+P9o/AYmBiIAbRUx0s46FizhgwEAAgwAAJd9Vn3NlgwAAAAASUVORK5CYII=");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon_facebook {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAaklEQVR42mJ0Cp7jycDAMBeIJRnwg+dAnMxEpGIGqJq5THgULwFicSBmBGJbmCYWPCYWAvEbdEF8GmCK/yMLMjGQCLBpsIW6GwaQ/UC6Ddj8cBjJZOr44TkJ6l+ANKSAGEQofgpKGgABBgAWcxAZp2KpkQAAAABJRU5ErkJggg==");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_facebook:hover, .social-likes__widget_facebook:active, .social-likes__widget_facebook:focus {
+  background: #425497;
+  border-color: #425497;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_facebook:hover .social-likes__icon_facebook, .social-likes__widget_facebook:active .social-likes__icon_facebook, .social-likes__widget_facebook:focus .social-likes__icon_facebook {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAaUlEQVR42mL6//+/JxA/+08YgNR4MoIYDAwMkgzEgedMeBQvAWJxIGYEYluomCQLHtMKgfgNuiA+DTDF/5EFmRhIBNg02ELdDQPIfiDdBlCw/sclRzU/PCdB/QuQhhQQgwjFT4E4GSDAAMuiQX7Tr7YFAAAAAElFTkSuQmCC");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon_twitter {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAA9ElEQVR42mKU3vqak4GB4TcQ/2HABFxAXA3EzkD8DIjbgfg+ECuwAIkwIHYD4gSoAchgORD7IfEDgPgpEGczAQlBII4C4kNAbIikSAqIfdEMYgRiMSD+B7JxJ9SZFkB8Foj3A/FWIP4KVYgO5gHxFpBGNSA+DsS2UIVOUIwLfAYRIKe+gGoiFpyDaTwJxEVA/J0ITd+hXgNrBIETMCcQADOA+D26RpCn/+LRdAuI62EcmMb/0IjOx6H5ATSu4a4ChaoPEMcAsTUQy6Bp+AfEy4C4EIjfIEuANG4B4rvQVKEOTWYfoKG3HYgfoluvPm8jA0CAAQAqvDQ/IXqkWQAAAABJRU5ErkJggg==");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_twitter:hover, .social-likes__widget_twitter:active, .social-likes__widget_twitter:focus {
+  background: #00b7ec;
+  border-color: #00b7ec;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_twitter:hover .social-likes__icon_twitter, .social-likes__widget_twitter:active .social-likes__icon_twitter, .social-likes__widget_twitter:focus .social-likes__icon_twitter {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAQAAAD4iURRAAAAo0lEQVQYGQXBsSoEAACA4Z8YKIO6yXLzjYrkHS5Wm5GyYPMAUgarMikpGZQHsFh4BZPhJi9wJdzn+7JkQZJk2bl3TzYNbGTfvUVJ8gyYmdjJMd6sS9bMAHwbZ+QHMy9OHQDgWtn1CgAALpUtAADAnpITUwAAU6tKtn0BALiSkjkXfgHAhxUpybwjvwA+DSVl7MEEwJ87A0lKRs7cenTj0FCSpH8xHAhkcGt6PAAAAABJRU5ErkJggg==");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon_plusone {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAABD0lEQVR42nTSsUtCURTH8eszSGgIgkqSoHBQh7QpbAlBcRCJ2staHFoa+hNyzqXBoan+gMDdoWgymkwkBxMiggo3a3Cp76WfcJHXgQ/nvfveue+ewwt08luGmEEdcwgjZP7iFrtmIqaUn5SXkUEDA+wZn/CwgQgetHYjC+JbZCOANWf9VXmobDd+c4vu8YgoalhFFpf4VL8rmMW8vR/3lEQV2yijhUO99KzeQ7p+95wjneAMQcRQ1JfsNA/wrc1T46KaznyMJqZxrcIvdNRf3957Gm8JO0ggjRx+cKpN21h0B7GJDw3EOGPvYuQ3ctvgC+K4w7nOfoQlFP4rsg+usI4Lrff0Z7QnCyqpffMrwAC15jTuOMaeqQAAAABJRU5ErkJggg==");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_plusone:hover, .social-likes__widget_plusone:active, .social-likes__widget_plusone:focus {
+  background: #dd4241;
+  border-color: #dd4241;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_plusone:hover .social-likes__icon_plusone, .social-likes__widget_plusone:active .social-likes__icon_plusone, .social-likes__widget_plusone:focus .social-likes__icon_plusone {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAA5klEQVR42myRvQrCMBSFUyehmyC4Zte1OPoALi6+gy/j6uobiINbF3Fx6tDFpZtSUFzEPxQxnksPchty4WvSJPeek5vIOWcQMViCFuiApqliDUbGD0kCeyLzAfiAI4i5VkM+CfiChdpIXRU2lNSgYAR6ysCB441jAkrfXs7KM1YXq3PuicUxuIO2/GvZKSh4n4xrcugKniwq88L3O+GmVB0GlKxWElsl2IEt1d4qsctu/ruXskqiFKXtL2WzRiQJ6McJWO8Jc/AA/dDj7niPDb2LpRU4e+q1x7VMkM5cSMZ7mBA/AQYALgmaWsDGGiQAAAAASUVORK5CYII=");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon_mailru {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAABIElEQVR42mTSzytEURjG8XunISbFxmQ5UYqGIj9KMztLCyTKrMZCs7K1U7NSLBRloWb+AREmFpPF7GUzRBaymGLpV5bi+9RzM+XU595zT+85533PueHTXhC1BFaRx6DHnnGEbbxoIPSEFCp+l3DjCWOYc38FFzEe7Tj3Dlr5AG0OWscA6jhFX5zHmgO1+oy3V0AHirhHGZ36jjnnknfaxzKmMIxdTKMHO0pPE/px6cA7nAV/bQsfXky7fmtCqA5a8Bn8bz/WqlhNaCCDE0xivCk459zfMKq6VPQxCth0wTUfcZdr+UIaWVR1D0k6115lFkNYwLuPeB4beFUm0cVN4NCnoaBb5z3iDFTfIx7Cpl+j23eyiF6Pqb4lXEVBvwIMAGRTP1kwMI3TAAAAAElFTkSuQmCC");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_mailru:hover, .social-likes__widget_mailru:active, .social-likes__widget_mailru:focus {
+  background: #255896;
+  border-color: #255896;
+  color: #ffcd00;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_mailru:hover .social-likes__icon_mailru, .social-likes__widget_mailru:active .social-likes__icon_mailru, .social-likes__widget_mailru:focus .social-likes__icon_mailru {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAABIElEQVR42mTSzytEURjG8Xtn0IyIDc1SFpJQ5EdN1ChLC6PJFCsWsvInKCvFQllYKPaaZpIpC83CntkgsrBSLP1K2Wh8n3pupubU5865p/c9533PnbBWDaLRijWsYMBrLyhiF69aCJ3Qg7J/j3DrhDFkPV/FuRKSTK6RQAbtmMEPCojjxGv9TTw2XIJ2n/PxN2jDFh5wjA69x1yzytBJB1hCGsPYxyxS2FN5SuhDxYH3OAv+xw4+vZlO/VVCqAma8RU0jpq1KFYJz5jCKSYxXhe87NrfMaq+1HQJ69h2w5e+4k738o1BTONC19rNpOpd5jGEHD5wiAVs4k2VRB9uwneectCd6x5xBervCY9h3V+jy99kEb1eU395XEVBfwIMAE0mQy9JLJUSAAAAAElFTkSuQmCC");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon_vkontakte {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAsElEQVR42mKJLJ3tycDAMBeIJRnwg+dAnMxEpGIGqJq5TGiKGZEwSE4ViDcha2LCYpIREK8C4l4gfgLElciSLDisDgXi/0A8DYi58GkA8Y8AsQkQfwHie0C8BVkBupO4kWyIBWJxIE4D4u/4nKQMxOVQ9jcgbgPii0BsgUvDIyCeBcR/gHgFVI00PhsuA3E61Lkg2xYAsSyyhudIcfGBQOS9AJmSAmIQEdNPQUkDIMAA8iAe2OyimvEAAAAASUVORK5CYII=");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_vkontakte:hover, .social-likes__widget_vkontakte:active, .social-likes__widget_vkontakte:focus {
+  background: #526e8f;
+  border-color: #526e8f;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_vkontakte:hover .social-likes__icon_vkontakte, .social-likes__widget_vkontakte:active .social-likes__icon_vkontakte, .social-likes__widget_vkontakte:focus .social-likes__icon_vkontakte {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAfUlEQVQYGQXBMQ4BUQAFwGej0P1aohJCJBpcwu6N1AqVTqFX6TSu4B4if2+gNGZirwIAqPZRAQBADSAiBmYeQACxcXc2sgICiA4/MzsggKFia6HxBAIolk6Oxia+EEDRgYN4QQDF2tXF1NAbAigiGnM3ICoAAOij1QMA+Gj/aNf4AJYJLVIAAAAASUVORK5CYII=");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon_odnoklassniki {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAYAAABfnvydAAAAyElEQVR42kzPMQtBcRTG4UvKQmalZFNKDNdm5gsYFCUlCbMyGMwsfACLzRcw2EwsGJTBQAZlUgxsfidvceq5/3vPeTv3Xs99FHMoP3ooOd+aoo+3T40hmnjouYsQWl4uEdRxRkLO6kVsQwB23nDRBruP2swGJ+zgYqKAq97JAi8UMUNFgb16LwvUkEYHcQUOaGNjgTKyaGCrQErn0gJVpQt/g6teObbfPGKAp/Orp3pH25DEHGGsFchghbxXXxvEAjlZqFf8CDAAgr4qyqKlfhgAAAAASUVORK5CYII=");
+  background-position: 6px 3px;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_odnoklassniki:hover, .social-likes__widget_odnoklassniki:active, .social-likes__widget_odnoklassniki:focus {
+  background: #f6903b;
+  border-color: #f6903b;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_odnoklassniki:hover .social-likes__icon_odnoklassniki, .social-likes__widget_odnoklassniki:active .social-likes__icon_odnoklassniki, .social-likes__widget_odnoklassniki:focus .social-likes__icon_odnoklassniki {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAQAAAD1lzQWAAAAgElEQVQIHQXBoRGCAAAF0N80OoA0AxTHcQMncAaO7J1ndRCbgUDRbPCgMABEjnu+F7FRGwxqG4m4YTLhJrG36BUKvcU+SnQiOpSx9cHDAx/biMoP/FQSZ3cnFxcnd+d4YfX2tuIVB1cjGF0dIgpf8FVIHI1otRgdozF72tl5mjV/486WhTdrOooAAAAASUVORK5CYII=");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__icon_pinterest {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAABCUlEQVR42nTRPUvDUBTG8ZtoKYogTsGCoAXtUqFuBR1c/AZddNbRQUqhH0Eo6KKDb0gpXQUHBxF0Kg6KFAWh4qI4KxQRtKXxf+C5OEgP/Ehu8uTclwSN0VmnWsE6shjEF05QwZMFQr04QB3vKOmjGlZxiZxTcE0Pi9jCGD402xnOsYNF67yBGwWP8IaCwhe4xjxmLDyNUySxjGGk3F/5Wcb9Rib04FNLu9LYmk2ih1cbVLXmKXTRwoPCc8jgES/WpYymlhOpSxoxdjXTNn7spo19nYbN1ME9hjTexLE/OqsAC/jGknYf6Yxv/U592LrkcYdn+VehrgmM4ND1r8CHB7CnX96v4l8BBgB54jWa5GM+bAAAAABJRU5ErkJggg==");
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_pinterest:hover, .social-likes__widget_pinterest:active, .social-likes__widget_pinterest:focus {
+  background: #cc002b;
+  border-color: #cc002b;
+}
+
+/* line 230, assets/sass/_support.scss */
+.social-likes__widget_pinterest:hover .social-likes__icon_pinterest, .social-likes__widget_pinterest:active .social-likes__icon_pinterest, .social-likes__widget_pinterest:focus .social-likes__icon_pinterest {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAQAAADV/FywAAAAvklEQVQYGQXBsUoUAACA4f/i8MBB0TdINCQQhHoDaXRzagkkopYGhRYfwKWhSYLDZ2ixNyiTVp1cXMQgaDpNsa6v70vy3DcTt34ZeyRlaIzPXnvpAy6tK2+wIwuSZ/75Yphz3+XQjS3JVzwOe0Z+463kCBu58dHIT/fW5IEzUys58NeqK6eSJ/44NZM5r2yaurTkoRNsK8kuLlybYt9AycAnd5a98M5TScmsH44lSVIyb2JbkiSDZNF7I0mS9B8IOsS5z/yrNgAAAABJRU5ErkJggg==");
+}
+
+/* line 231, assets/sass/_support.scss */
+.social-likes {
+  margin: 0px;
+  margin-top: 1px;
+}
+
+/* line 232, assets/sass/_support.scss */
+.social-likes__widget {
+  margin: 0 10px 10px 0px;
+}
+
+/* line 236, assets/sass/_support.scss */
+.social-likes_single.social-likes_opened {
+  top: -111px !important;
+  left: 0px !important;
+}
+
+/* Semantic Overwrite 
+------------------------------*/
+/* line 243, assets/sass/_support.scss */
+.ui.doubling.grid {
+  width: auto !important;
+}
+
+/* line 246, assets/sass/_support.scss */
+.ui.breadcrumb .active.section {
+  font-weight: normal;
+}
+
+/* line 249, assets/sass/_support.scss */
+.ui.breadcrumb .divider {
+  opacity: 0.8;
+  position: relative;
+  top: -1px;
+}
+
+/* line 254, assets/sass/_support.scss */
+.ui.form .field > label {
+  font-weight: normal;
+}
+
+/* line 257, assets/sass/_support.scss */
+.ui.checkbox {
+  font-size: 13px;
+}
+
+/* line 260, assets/sass/_support.scss */
+.ui.form .field *:disabled, .ui.form .field.disabled, .ui.form .field.disabled label {
+  opacity: 1;
+  background: #f5f5f5;
+  color: #555555;
+}
+
+/* line 265, assets/sass/_support.scss */
+.ui.form .field > .selection.dropdown > .dropdown.icon {
+  color: #999999;
+}
+
+/* line 268, assets/sass/_support.scss */
+.ui.comments .comment a.author {
+  font-weight: 600;
+}
+/* line 270, assets/sass/_support.scss */
+.ui.comments .comment a.author:hover {
+  color: #00979d;
+}
+
+/* line 274, assets/sass/_support.scss */
+.ui.form .field > label {
+  font-size: 14px;
+}
+
+/* line 277, assets/sass/_support.scss */
+.ui.checkbox label {
+  font-size: 14px;
+}
+
+/* line 280, assets/sass/_support.scss */
+.ui.menu {
+  box-shadow: none;
+  border: 1px solid #eeeeee;
+}
+
+/* line 284, assets/sass/_support.scss */
+#header-search .ui.search > .results {
+  border-radius: 0px !important;
+  margin-top: 0px !important;
+}
+/* line 287, assets/sass/_support.scss */
+#header-search .ui.search > .results .result .title, #header-search .ui.search > .results .action {
+  font-weight: normal;
+}
